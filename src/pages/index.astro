@@ -47,12 +47,11 @@ const projects = (await getCollection('work'))
 					</div>
 				</Hero>
 
-				<img
-					alt="Giuliano Loic - Portrait"
-					width="480"
-					height="620"
-					src="/assets/portrait.jpg"
-				/>
+				
+				<model-viewer src="/assets/65ba8146cf4c89269702fd90.glb" alt="Votre Avatar 3D" auto-rotate camera-controls 
+				shadow-intensity="1" autoplay animation-name="Running"
+				></model-viewer>
+
 			</header>
 
 			<Skills />
@@ -117,6 +116,10 @@ const projects = (await getCollection('work'))
 </BaseLayout>
 
 <style>
+	model-viewer {
+  min-height: 100%;
+	max-width: 100%;
+}
 	.hero {
 		display: flex;
 		flex-direction: column;
