@@ -10,14 +10,6 @@ export const collections = {
       tags: z.array(z.string()),
       img: z.string(),
       img_alt: z.string().optional(),
-      pages: z.array(
-        z.object({
-          img: z.string(),
-          description: z.string(),
-          url: z.string(),
-          features: z.array(z.string()),
-        })
-      ),
     }),
   }),
 };
