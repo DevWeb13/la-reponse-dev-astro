@@ -1,70 +1,91 @@
 ---
-import Icon from './Icon.astro';
+import Icon from './Icon.astro'
 ---
 
 <section class="box skills">
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Full Stack</h2>
-		<p>
-			 Avec l'utilisation de frameworks modernes comme <a href="https://nextjs.org/" target="_blank">Next.js</a>, <a href="https://astro.build/" target="_blank">Astro</a>,
-			 ou encore <a href="https://qwik.dev/" target="_blank">Qwik</a>,
-			 je suis capable de développer des applications web complètes.
-		</p>
-	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="devices" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Multi-plateforme</h2>
-		<p>
-			Mes applications sont développées pour fonctionner sur toutes les plateformes et tailles d'écran.
-		</p>
-	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="gauge" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Performance</h2>
-		<p>
-			 Dans le but d'optimiser le référencement naturel, la vitesse de chargement et l'expérience utilisateur, je m'assure que mes applications soient les plus performantes possible.
-		</p>
-	</div>
+    <div class="stack gap-2 lg:gap-4">
+        <Icon
+            icon="terminal-window"
+            color="var(--accent-regular)"
+            size="2.5rem"
+            gradient
+        />
+        <h2>Full Stack</h2>
+        <p>
+            Avec l'utilisation de frameworks modernes comme <a
+                href="https://nextjs.org/"
+                target="_blank">Next.js</a
+            >, <a href="https://astro.build/" target="_blank">Astro</a>, ou
+            encore <a href="https://qwik.dev/" target="_blank">Qwik</a>, je
+            développe des applications web complètes.
+        </p>
+    </div>
+    <div class="stack gap-2 lg:gap-4">
+        <Icon
+            icon="devices"
+            color="var(--accent-regular)"
+            size="2.5rem"
+            gradient
+        />
+        <h2>Multi-plateforme</h2>
+        <p>
+            Mes applications sont développées pour fonctionner sur toutes les
+            plateformes et tailles d'écran.
+        </p>
+    </div>
+    <div class="stack gap-2 lg:gap-4">
+        <Icon
+            icon="gauge"
+            color="var(--accent-regular)"
+            size="2.5rem"
+            gradient
+        />
+        <h2>Performance</h2>
+        <p>
+            Dans le but d'optimiser le référencement naturel, la vitesse de
+            chargement et l'expérience utilisateur, je m'assure que mes
+            applications soient les plus performantes possible.
+        </p>
+    </div>
 </section>
 
 <style>
-	.box {
-		border: 1px solid var(--gray-800);
-		border-radius: 0.75rem;
-		padding: 1.5rem;
-		background-color: var(--gray-999_40);
-		box-shadow: var(--shadow-sm);
-	}
+    .box {
+        border: 1px solid var(--gray-800);
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        background-color: var(--gray-999_40);
+        box-shadow: var(--shadow-sm);
+    }
 
-	.skills {
-		display: flex;
-		flex-direction: column;
-		gap: 3rem;
-	}
+    .skills {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
 
-	.skills h2 {
-		font-size: var(--text-lg);
-	}
+    .skills h2 {
+        font-size: var(--text-lg);
+    }
 
-	.skills p {
-		color: var(--gray-400);
-	}
+    .skills p {
+        color: var(--gray-400);
+    }
 
-	@media (min-width: 50em) {
-		.box {
-			border-radius: 1.5rem;
-			padding: 2.5rem;
-		}
+    @media (min-width: 50em) {
+        .box {
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+        }
 
-		.skills {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 5rem;
-		}
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5rem;
+        }
 
-		.skills h2 {
-			font-size: var(--text-2xl);
-		}
-	}
+        .skills h2 {
+            font-size: var(--text-2xl);
+        }
+    }
 </style>
