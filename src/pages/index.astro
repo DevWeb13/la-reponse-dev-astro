@@ -29,7 +29,7 @@ const projects = (await getCollection('work'))
     <div class="stack gap-20 lg:gap-48">
         <div class="wrapper stack gap-8 lg:gap-20">
             <header class="hero">
-                <Hero
+                 <Hero
                     title="Salut, je suis Giuliano Loic"
                     tagline="Je suis un développeur web basé à Marseille, France."
                     align="start"
@@ -139,14 +139,23 @@ const projects = (await getCollection('work'))
 </BaseLayout>
 
 <script>
-    const modelViewer = document.querySelector('#monModelViewer')
+    interface CustomModelViewerElement extends HTMLElement {
+    play: ({ repetitions }: { repetitions: number }) => void;
+    animationName: string;
+    updateComplete: Promise<void>;
+    // Ajouter d'autres propriétés et méthodes spécifiques ici
+}
+    const modelViewer: 
+     CustomModelViewerElement | null
+    = document.querySelector('#monModelViewer')
     const animations = ['Idle', 'ArmStretching']
 
     let i = 0
     let isHovered = false // Flag pour suivre l'état de survol
 
     const play = async () => {
-        if (isHovered && modelViewer.animationName === 'ArmStretching') {
+        if (!modelViewer) return
+        if (isHovered && (modelViewer).animationName === 'ArmStretching') {
             // Attendre la fin de l'animation ArmStretching si survolé
             return
         }
@@ -157,6 +166,7 @@ const projects = (await getCollection('work'))
     }
 
     const playHello = async () => {
+        if (!modelViewer) return
         // Jouer l'animation "Hello" si ce n'est pas pendant "ArmStretching"
         if (modelViewer.animationName !== 'ArmStretching') {
             modelViewer.animationName = 'Hello'
@@ -179,16 +189,16 @@ const projects = (await getCollection('work'))
         }
     }
 
-    modelViewer.addEventListener('load', play)
-    modelViewer.addEventListener('finished', play)
+    modelViewer?.addEventListener('load', play)
+    modelViewer?.addEventListener('finished', play)
 
     // Gestion du survol
-    modelViewer.addEventListener('mouseenter', () => {
+    modelViewer?.addEventListener('mouseenter', () => {
         isHovered = true
         playHello()
     })
 
-    modelViewer.addEventListener('mouseleave', () => {
+    modelViewer?.addEventListener('mouseleave', () => {
         isHovered = false
     })
 </script>
