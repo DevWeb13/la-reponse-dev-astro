@@ -29,9 +29,9 @@ const projects = (await getCollection('work'))
     <div class="stack gap-20 lg:gap-48">
         <div class="wrapper stack gap-8 lg:gap-20">
             <header class="hero">
-                 <Hero
+                <Hero
                     title="Salut, je suis Giuliano Loic"
-                    tagline="Je suis un développeur web basé à Marseille, France."
+                    tagline="Je suis un développeur web à Marseille, France."
                     align="start"
                 >
                     <div class="roles">
@@ -53,7 +53,6 @@ const projects = (await getCollection('work'))
                 <model-viewer
                     id="monModelViewer"
                     src="/assets/models/myAvatar.glb"
-                 
                     ar-scale="fixed"
                     camera-controls
                     touch-action="pan-y"
@@ -140,14 +139,13 @@ const projects = (await getCollection('work'))
 
 <script>
     interface CustomModelViewerElement extends HTMLElement {
-    play: ({ repetitions }: { repetitions: number }) => void;
-    animationName: string;
-    updateComplete: Promise<void>;
-    // Ajouter d'autres propriétés et méthodes spécifiques ici
-}
-    const modelViewer: 
-     CustomModelViewerElement | null
-    = document.querySelector('#monModelViewer')
+        play: ({ repetitions }: { repetitions: number }) => void
+        animationName: string
+        updateComplete: Promise<void>
+        // Ajouter d'autres propriétés et méthodes spécifiques ici
+    }
+    const modelViewer: CustomModelViewerElement | null =
+        document.querySelector('#monModelViewer')
     const animations = ['Idle', 'ArmStretching']
 
     let i = 0
@@ -155,7 +153,7 @@ const projects = (await getCollection('work'))
 
     const play = async () => {
         if (!modelViewer) return
-        if (isHovered && (modelViewer).animationName === 'ArmStretching') {
+        if (isHovered && modelViewer.animationName === 'ArmStretching') {
             // Attendre la fin de l'animation ArmStretching si survolé
             return
         }
@@ -172,7 +170,7 @@ const projects = (await getCollection('work'))
             modelViewer.animationName = 'Hello'
             await modelViewer.updateComplete
             modelViewer.play({ repetitions: 1 })
-            i = 0; // Réinitialiser l'index pour la prochaine fois
+            i = 0 // Réinitialiser l'index pour la prochaine fois
         } else {
             // Attendre la fin de "ArmStretching" puis jouer "Hello"
             modelViewer.addEventListener(
@@ -183,7 +181,7 @@ const projects = (await getCollection('work'))
                         modelViewer.updateComplete.then(() => {
                             modelViewer.play({ repetitions: 1 })
                         })
-                        i = 0; // Réinitialiser l'index pour la prochaine fois
+                        i = 0 // Réinitialiser l'index pour la prochaine fois
                     }
                 },
                 { once: true }
@@ -205,15 +203,15 @@ const projects = (await getCollection('work'))
     })
 
     // Fonction pour gérer le clic ou le toucher sur mobile
-const handleMobileInteraction = () => {
-    isHovered = true; // Vous pouvez choisir de traiter un clic comme un survol
-    playHello();
-    setTimeout(() => isHovered = false, 1000); // Réinitialiser après un délai si nécessaire
-}
+    const handleMobileInteraction = () => {
+        isHovered = true // Vous pouvez choisir de traiter un clic comme un survol
+        playHello()
+        setTimeout(() => (isHovered = false), 1000) // Réinitialiser après un délai si nécessaire
+    }
 
-// Ajout du gestionnaire d'événements pour les clics sur mobile
-modelViewer?.addEventListener('touchstart', handleMobileInteraction);
-modelViewer?.addEventListener('click', handleMobileInteraction);
+    // Ajout du gestionnaire d'événements pour les clics sur mobile
+    modelViewer?.addEventListener('touchstart', handleMobileInteraction)
+    modelViewer?.addEventListener('click', handleMobileInteraction)
 </script>
 
 <style>
@@ -236,6 +234,7 @@ modelViewer?.addEventListener('click', handleMobileInteraction);
         box-shadow: var(--shadow-md);
         width: 100%;
         height: 100%;
+        max-width: 500px;
     }
 
     @media (min-width: 50em) {
