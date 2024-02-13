@@ -14,7 +14,7 @@ import Hero from '../components/Hero.astro'
             <header class="hero">
                 <Hero
                     title="À-propos de moi"
-                    tagline="Merci de visiter mon site web. Je suis un développeur web passionné par la création de sites web et d'applications web."
+                    tagline="Merci de visiter mon site web. Je suis un développeur web passionné par la création de sites et d'applications web."
                 />
                 <div class="video-container">
                     <video
@@ -39,7 +39,12 @@ import Hero from '../components/Hero.astro'
             <section>
                 <h2 class="section-title">Mon parcours</h2>
                 <div class="content">
-                    <p>Bonjour, je suis Loic, Développeur web 👋</p>
+                    <p>
+                        Bonjour, je suis Loic, Développeur web <img
+                            src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif"
+                            width="30px"
+                        />
+                    </p>
                     <br />
                     <p>
                         Passioné depuis toujours par l'informatique, les jeux
@@ -74,7 +79,17 @@ import Hero from '../components/Hero.astro'
                         N'hésitez pas à me contacter pour discuter de vos
                         projets.👇
                     </p>
-                    <br />
+                </div>
+            </section>
+            <section>
+                <h2 class="section-title">Technologies</h2>
+                <div class="content">
+                    <p>Corporis voluptates tenetur laudantium.</p>
+                </div>
+            </section>
+            <section>
+                <h2 class="section-title">Compétences</h2>
+                <div class="content">
                     <p>
                         <span class="bold"
                             >Expertise en technologies avancées:</span
@@ -116,23 +131,12 @@ import Hero from '../components/Hero.astro'
                         la manière dont je peux apporter mes compétences en développement
                         pour enrichir vos projets web.👇
                     </p>
+                    <br />
                 </div>
-                <!-- <section>
-                    <h2 class="section-title">Education</h2>
-                    <div class="content">
-                        <p>Corporis voluptates tenetur laudantium.</p>
-                    </div>
-                </section>
-                <section>
-                    <h2 class="section-title">Skills</h2>
-                    <div class="content">
-                        <p>officia unde omnis</p>
-                    </div>
-                </section> -->
             </section>
         </main>
-        <ContactCTA />
     </div>
+    <ContactCTA />
 </BaseLayout>
 
 <style>
@@ -152,7 +156,7 @@ import Hero from '../components/Hero.astro'
         max-width: 200px;
         /* max-height: 320px; */
         border-radius: 1rem;
-
+        background-color: white;
         margin: auto;
         box-shadow: var(--shadow-sm);
     }
@@ -177,12 +181,13 @@ import Hero from '../components/Hero.astro'
     .credits {
         font-size: var(--text-sm);
         margin: 0.5rem 0;
+        color: #3d4663;
     }
 
     section {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 1.5rem;
         color: var(--gray-200);
     }
 
@@ -221,8 +226,13 @@ import Hero from '../components/Hero.astro'
         }
 
         section {
-            display: contents;
+            flex-direction: row;
             font-size: var(--text-lg);
+        }
+
+        section h2 {
+            font-size: var(--text-2xl);
+            min-width: 30%;
         }
     }
 </style>
