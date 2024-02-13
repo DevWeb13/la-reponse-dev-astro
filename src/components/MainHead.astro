@@ -6,6 +6,7 @@ interface Props {
     description?: string | undefined
 }
 
+import SpeedInsights from '@vercel/speed-insights/astro'
 const {
     title = 'Giuliano Loic | La ReponseDev',
     description = 'Le site de Giuliano Loic, développeur web',
@@ -54,6 +55,8 @@ const {
         })
     }
 </script>
+
+<SpeedInsights />
 <script
     defer
     type="module"
