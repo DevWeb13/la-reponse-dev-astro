@@ -1,4 +1,5 @@
 ---
+// src/layouts/BaseLayout.astro
 // Learn about using Astro layouts:
 // https://docs.astro.build/en/core-concepts/layouts/
 
@@ -17,7 +18,7 @@ const { title, description } = Astro.props
 
 <html lang="fr">
     <head>
-        <!-- Google ADSense -->
+        <MainHead title={title} description={description} />
         <!-- Google tag (gtag.js) -->
         <script
             type="text/partytown"
@@ -35,11 +36,10 @@ const { title, description } = Astro.props
         </script>
         <!-- Google ADSense disable pub blocker navigator message -->
         <script
-            type="text/partytown"
             async
             src="https://fundingchoicesmessages.google.com/i/pub-2091224773462896?ers=1"
             nonce="lLQKDYKmR_eZ5nMp5pkIRA"></script>
-        <script type="text/partytown" nonce="lLQKDYKmR_eZ5nMp5pkIRA">
+        <script nonce="lLQKDYKmR_eZ5nMp5pkIRA">
             ;(function () {
                 function signalGooglefcPresent() {
                     if (!window.frames['googlefcPresent']) {
@@ -58,7 +58,6 @@ const { title, description } = Astro.props
                 signalGooglefcPresent()
             })()
         </script>
-        <MainHead title={title} description={description} />
     </head>
     <body>
         <div class="stack backgrounds">
