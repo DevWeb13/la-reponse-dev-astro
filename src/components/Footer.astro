@@ -3,41 +3,43 @@ import Icon from './Icon.astro'
 const currentYear = new Date().getFullYear()
 ---
 
-<footer>
-    <div class="group">
-        <p>
-            Développé à Marseille avec
-            <a target="_blank" href="https://astro.build/">Astro</a>
-            <Icon icon="rocket-launch" size="1.2em" />
+<>
+    <footer>
+        <div class="group">
+            <p>
+                Développé à Marseille avec
+                <a target="_blank" href="https://astro.build/">Astro</a>
+                <Icon icon="rocket-launch" size="1.2em" />
+            </p>
+            <p>
+                &copy; {currentYear}
+                <a
+                    target="_blank"
+                    href="https://www.linkedin.com/company/lareponsedev"
+                    >LaReponseDev</a
+                >
+            </p>
+        </div>
+        <p class="privacy">
+            <a href="/privacy">Politique de confidentialité</a>
         </p>
-        <p>
-            &copy; {currentYear}
+        <p class="socials">
+            <a target="_blank" href="https://twitter.com/DeveloppementW1">
+                Twitter</a
+            >
+            <a target="_blank" href="https://github.com/DevWeb13"> GitHub</a>
+            <a target="_blank" href="https://www.linkedin.com/in/loic-giuliano">
+                LinkedIn</a
+            >
+            <a target="_blank" href="https://discord.gg/fXz8nQmjgj"> Discord</a>
             <a
                 target="_blank"
-                href="https://www.linkedin.com/company/lareponsedev"
-                >LaReponseDev</a
+                href="https://www.youtube.com/channel/UCzzP_EL9yg9DNfqgsYmRbdQ"
+            >
+                YouTube</a
             >
         </p>
-    </div>
-    <p class="privacy">
-        <a href="/privacy">Politique de confidentialité</a>
-    </p>
-    <p class="socials">
-        <a target="_blank" href="https://twitter.com/DeveloppementW1">
-            Twitter</a
-        >
-        <a target="_blank" href="https://github.com/DevWeb13"> GitHub</a>
-        <a target="_blank" href="https://www.linkedin.com/in/loic-giuliano">
-            LinkedIn</a
-        >
-        <a target="_blank" href="https://discord.gg/fXz8nQmjgj"> Discord</a>
-        <a
-            target="_blank"
-            href="https://www.youtube.com/channel/UCzzP_EL9yg9DNfqgsYmRbdQ"
-        >
-            YouTube</a
-        >
-    </p>
+    </footer>
     <div class="wrapper stack gap-8 lg:gap-20">
         <ins
             class="adsbygoogle flex items-center justify-center"
@@ -48,7 +50,7 @@ const currentYear = new Date().getFullYear()
             ;(adsbygoogle = window.adsbygoogle || []).push({})
         </script>
     </div>
-</footer>
+</>
 <style>
     footer {
         display: flex;
