@@ -9,8 +9,8 @@ import Hero from '../components/Hero.astro'
     title="À-propos | Giuliano Loic"
     description="À-propos de Giuliano Loic développeur web"
 >
-    <div class="stack gap-20 lg:gap-48">
-        <main class="wrapper stack gap-8 lg:gap-20">
+    <main class="wrapper stack gap-20 lg:gap-48">
+        <div class="stack gap-8 lg:gap-20">
             <header class="hero">
                 <Hero
                     title="À-propos de moi"
@@ -157,8 +157,8 @@ import Hero from '../components/Hero.astro'
                     ;(adsbygoogle = window.adsbygoogle || []).push({})
                 </script>
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
     <ContactCTA />
 </BaseLayout>
 
@@ -176,7 +176,7 @@ import Hero from '../components/Hero.astro'
         flex-direction: column;
         justify-content: center; /* Centre horizontalement */
         align-items: center; /* Centre verticalement */
-        max-width: 200px;
+        /* max-width: 200px; */
         /* max-height: 320px; */
         border-radius: 1rem;
         background-color: white;

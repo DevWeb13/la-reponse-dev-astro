@@ -26,8 +26,8 @@ const projects = (await getCollection('work'))
 ---
 
 <BaseLayout>
-    <div class="stack gap-20 lg:gap-48">
-        <div class="wrapper stack gap-8 lg:gap-20">
+    <main class="wrapper stack gap-20 lg:gap-48">
+        <div class="stack gap-8 lg:gap-20">
             <header class="hero">
                 <Hero
                     title="Salut, je suis Giuliano Loic"
@@ -97,48 +97,46 @@ const projects = (await getCollection('work'))
             </script>
         </div> -->
 
-        <main class="wrapper stack gap-20 lg:gap-48">
-            <section class="section with-background with-cta">
-                <header class="section-header stack gap-2 lg:gap-4">
-                    <h3>Quelques projets</h3>
-                    <p>
-                        Visualisez quelques-uns de mes projets récents
-                        ci-dessous.
-                    </p>
-                </header>
+        <section class="section with-background with-cta">
+            <header class="section-header stack gap-2 lg:gap-4">
+                <h3>Quelques projets</h3>
+                <p>
+                    Visualisez quelques-uns de mes projets récents ci-dessous.
+                </p>
+            </header>
 
-                <div class="gallery">
-                    <Grid variant="offset">
-                        {
-                            projects.map((project) => (
-                                <li>
-                                    <PortfolioPreview project={project} />
-                                </li>
-                            ))
-                        }
-                    </Grid>
-                </div>
-
-                <div class="cta">
-                    <CallToAction href="/work/">
-                        Voir plus de projets
-                        <Icon icon="arrow-right" size="1.2em" />
-                    </CallToAction>
-                </div>
-            </section>
-            <div class="wrapper stack gap-8 lg:gap-20">
-                <ins
-                    class="adsbygoogle flex items-center justify-center"
-                    data-ad-layout="in-article"
-                    data-ad-format="fluid"
-                    data-ad-client="ca-pub-2091224773462896"
-                    data-ad-slot="8894881530"></ins>
-                <script type="text/javascript">
-                    ;(adsbygoogle = window.adsbygoogle || []).push({})
-                </script>
+            <div class="gallery">
+                <Grid variant="offset">
+                    {
+                        projects.map((project) => (
+                            <li>
+                                <PortfolioPreview project={project} />
+                            </li>
+                        ))
+                    }
+                </Grid>
             </div>
 
-            <!-- <section class="section with-background bg-variant">
+            <div class="cta">
+                <CallToAction href="/work/">
+                    Voir plus de projets
+                    <Icon icon="arrow-right" size="1.2em" />
+                </CallToAction>
+            </div>
+        </section>
+        <div class="wrapper stack gap-8 lg:gap-20">
+            <ins
+                class="adsbygoogle flex items-center justify-center"
+                data-ad-layout="in-article"
+                data-ad-format="fluid"
+                data-ad-client="ca-pub-2091224773462896"
+                data-ad-slot="8894881530"></ins>
+            <script type="text/javascript">
+                ;(adsbygoogle = window.adsbygoogle || []).push({})
+            </script>
+        </div>
+
+        <!-- <section class="section with-background bg-variant">
                 <header class="section-header stack gap-2 lg:gap-4">
                     <h3>Mentions</h3>
                     <p>
@@ -166,10 +164,9 @@ const projects = (await getCollection('work'))
                     </Grid>
                 </div>
             </section> -->
-        </main>
 
         <ContactCTA />
-    </div>
+    </main>
 </BaseLayout>
 
 <script>

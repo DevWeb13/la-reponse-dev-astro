@@ -17,8 +17,8 @@ const projects = (await getCollection('work')).sort(
     title="LaReponseDev | Giuliano Loic"
     description="En savoir plus sur mes projets et mon expérience."
 >
-    <div class="stack gap-20">
-        <main class="wrapper stack gap-8">
+    <main class="wrapper stack gap-20 lg:gap-48">
+        <div class="stack gap-8 lg:gap-20">
             <Hero
                 title="Mes projets"
                 tagline="J'ai travaillé sur une grande variété de projets, de l'intégration de maquettes à la création d'application web complexes."
@@ -33,19 +33,19 @@ const projects = (await getCollection('work')).sort(
                     ))
                 }
             </Grid>
-        </main>
 
-        <div class="wrapper stack gap-8 lg:gap-20">
-            <ins
-                class="adsbygoogle flex items-center justify-center"
-                data-ad-layout="in-article"
-                data-ad-format="fluid"
-                data-ad-client="ca-pub-2091224773462896"
-                data-ad-slot="8894881530"></ins>
-            <script type="text/javascript">
-                ;(adsbygoogle = window.adsbygoogle || []).push({})
-            </script>
+            <div class="wrapper stack gap-8 lg:gap-20">
+                <ins
+                    class="adsbygoogle flex items-center justify-center"
+                    data-ad-layout="in-article"
+                    data-ad-format="fluid"
+                    data-ad-client="ca-pub-2091224773462896"
+                    data-ad-slot="8894881530"></ins>
+                <script type="text/javascript">
+                    ;(adsbygoogle = window.adsbygoogle || []).push({})
+                </script>
+            </div>
+            <ContactCTA />
         </div>
-        <ContactCTA />
-    </div>
+    </main>
 </BaseLayout>
