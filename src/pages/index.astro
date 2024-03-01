@@ -26,8 +26,8 @@ const projects = (await getCollection('work'))
 ---
 
 <BaseLayout>
-    <main class="wrapper stack gap-20 lg:gap-48">
-        <div class="stack gap-8 lg:gap-20">
+    <div class="stack gap-8 lg:gap-20">
+        <main class="wrapper stack gap-20 lg:gap-48">
             <header class="hero">
                 <Hero
                     title="Salut, je suis Giuliano Loic"
@@ -140,7 +140,7 @@ const projects = (await getCollection('work'))
                     </Grid>
                 </div>
             </section> -->
-        </div>
+        </main>
 
         <div class="wrapper stack gap-8 lg:gap-20">
             <ins
@@ -165,7 +165,7 @@ const projects = (await getCollection('work'))
                 ;(adsbygoogle = window.adsbygoogle || []).push({})
             </script>
         </div>
-    </main>
+    </div>
 </BaseLayout>
 
 <script>
