@@ -59,6 +59,7 @@ const {
 
 <SpeedInsights />
 <script
+    is:inline
     async
     type="module"
     src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"
@@ -66,14 +67,15 @@ const {
 
 <!-- Google AdSense -->
 <script
+    is:inline
     async
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2091224773462896"
-    crossorigin="anonymous"></script>
-
+    crossorigin="anonymous"/>
+    
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DKG4CT39WL"
-></script>
-<script type="text/javascript">
+<script is:inline src="https://www.googletagmanager.com/gtag/js?id=G-DKG4CT39WL"
+/>
+<script is:inline>
     window.dataLayer = window.dataLayer || []
     function gtag() {
         dataLayer.push(arguments)
@@ -85,10 +87,11 @@ const {
 
 <!-- Google ADSense disable pub blocker navigator message -->
 <script
+    is:inline
     async
     src="https://fundingchoicesmessages.google.com/i/pub-2091224773462896?ers=1"
-    nonce="lLQKDYKmR_eZ5nMp5pkIRA"></script>
-<script nonce="lLQKDYKmR_eZ5nMp5pkIRA" type="text/javascript">
+    nonce="lLQKDYKmR_eZ5nMp5pkIRA"/>
+<script is:inline nonce="lLQKDYKmR_eZ5nMp5pkIRA" type="text/javascript">
     ;(function () {
         function signalGooglefcPresent() {
             if (!window.frames['googlefcPresent']) {
