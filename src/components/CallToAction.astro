@@ -7,16 +7,18 @@ const { href } = Astro.props;
 ---
 {href.includes('work') ? (
 	<a
-	href={href}
-	
-	><slot /></a>
-	) : (
-		<a
+		href={href}
+	>
+		<slot />
+	</a>
+) : (
+	<a
 		href={href}
 		target="_blank"
-		><slot /></a>
-	)
-	}
+	>
+		<slot />
+	</a>
+)}
 
 
 <style>
