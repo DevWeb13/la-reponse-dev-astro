@@ -106,8 +106,6 @@ Chaque chapitre est pensé pour être court, concret et immédiatement applicabl
 
 ---
 
----
-
 ### Page Releases
 
 <a href="https://www.learn-qwik.com/releases/?page=1" target="_blank">
@@ -122,8 +120,6 @@ Chaque release est récupérée depuis GitHub et affichée sous forme de cartes 
 -   Vue simplifiée pour suivre les évolutions du framework en temps réel.
 
 L'objectif est d'intégrer directement dans Learn Qwik les nouveautés majeures sans quitter la plateforme.
-
----
 
 ---
 
@@ -147,8 +143,6 @@ _Avril 2025 · 5 min de lecture_
 > Qwik loads instantly, uses less JavaScript, and delivers better performance for users and the planet.
 
 👉 <a href="https://www.learn-qwik.com/blog/qwik-2025" target="_blank">Lire l’article complet</a>
-
----
 
 ---
 
