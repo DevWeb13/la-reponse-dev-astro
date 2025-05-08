@@ -1,9 +1,10 @@
 ---
 interface Props {
 	href: string;
+	id?:string;
 }
 
-const { href } = Astro.props;
+const { href,id } = Astro.props;
 ---
 {href.includes('work') ? (
 	<a
@@ -14,6 +15,7 @@ const { href } = Astro.props;
 ) : (
 	<a
 		href={href}
+		id={id}
 		target="_blank"
 	>
 		<slot />
