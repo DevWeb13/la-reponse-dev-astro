@@ -19,6 +19,10 @@ const { title, description } = Astro.props
 <html lang="fr">
     <head>
         <MainHead title={title} description={description} />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
         <!-- Google Tag Manager (noscript) -->
@@ -153,13 +157,6 @@ const { title, description } = Astro.props
                 h6 {
                     line-height: 1.2;
                 }
-            }
-
-            /* Optimisation du chargement des polices */
-            @font-face {
-                font-family: 'Public Sans';
-                font-display: swap;
-                src: url('/fonts/PublicSans-Regular.woff2') format('woff2');
             }
         </style>
     </body>
