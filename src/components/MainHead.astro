@@ -11,27 +11,37 @@ const {
     title = 'Giuliano Loic | La ReponseDev',
     description = "Développeur web freelance spécialisé dans les sites sur mesure, PWA et optimisation SEO / performance. Je vous accompagne de A à Z, du design au déploiement, en passant par l'accessibilité, l'UX mobile et les audits techniques (SEO, performance, accessibilité).",
 } = Astro.props
-const now = new Date().toISOString();
+const now = new Date().toISOString()
 ---
 
 <!-- Google Tag Manager -->
-<script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5TSZCKVW');</script>
-    <!-- End Google Tag Manager -->
-
-
+<script is:inline>
+    ;(function (w, d, s, l, i) {
+        w[l] = w[l] || []
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : ''
+        j.async = true
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+        f.parentNode.insertBefore(j, f)
+    })(window, document, 'script', 'dataLayer', 'GTM-5TSZCKVW')
+</script>
+<!-- End Google Tag Manager -->
 <meta charset="UTF-8" />
 <meta name="description" property="og:description" content={description} />
 
 <!-- Open Graph / LinkedIn -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.lareponsedev.com/" />
+<meta property="og:url" content={Astro.url.href} />
 <meta property="og:title" content={title} />
-<meta property="og:description" content="Développeur web freelance spécialisé en applications web, sites sur mesure, PWA, et optimisation SEO / performance. Je vous accompagne de A à Z, du design au déploiement." />
-<meta property="og:image" content="https://www.lareponsedev.com/assets/og-image-linkedin-v3.png" />
+<meta property="og:description" content={description} />
+<meta
+    property="og:image"
+    content="https://www.lareponsedev.com/assets/og-image-linkedin-v3.png"
+/>
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <meta property="og:locale" content="fr_FR" />
 <meta property="og:site_name" content="La ReponseDev" />
 <meta name="author" content="Giuliano Loic" />
@@ -40,13 +50,14 @@ const now = new Date().toISOString();
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:url" content="https://www.lareponsedev.com/" />
-<meta name="twitter:title" content={title} />
-<meta name="twitter:description" content="Développeur web freelance spécialisé en applications web, sites sur mesure, PWA, et optimisation SEO / performance. Je vous accompagne de A à Z, du design au déploiement." />
-<meta name="twitter:image" content="https://www.lareponsedev.com/assets/og-image-linkedin-v3.png" />
-<meta name="twitter:creator" content="@DeveloppementW1" />
 <meta name="twitter:site" content="@DeveloppementW1" />
-
+<meta name="twitter:creator" content="@DeveloppementW1" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta
+    name="twitter:image"
+    content="https://www.lareponsedev.com/assets/og-image-linkedin-v3.png"
+/>
 
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
@@ -103,16 +114,14 @@ const now = new Date().toISOString();
     is:inline
     async
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2091224773462896"
-    crossorigin="anonymous"/>
-    
-
+    crossorigin="anonymous"></script>
 
 <!-- Google ADSense disable pub blocker navigator message -->
 <script
     is:inline
     async
     src="https://fundingchoicesmessages.google.com/i/pub-2091224773462896?ers=1"
-    nonce="lLQKDYKmR_eZ5nMp5pkIRA"/>
+    nonce="lLQKDYKmR_eZ5nMp5pkIRA"></script>
 <script is:inline nonce="lLQKDYKmR_eZ5nMp5pkIRA" type="text/javascript">
     ;(function () {
         function signalGooglefcPresent() {
@@ -132,3 +141,49 @@ const now = new Date().toISOString();
         signalGooglefcPresent()
     })()
 </script>
+
+<!-- Après les balises meta existantes -->
+<meta name="language" content="fr" />
+<meta name="revisit-after" content="7 days" />
+<meta name="geo.region" content="FR-13" />
+<meta name="geo.placename" content="Marseille" />
+<meta name="geo.position" content="43.296482;5.369780" />
+<meta name="ICBM" content="43.296482, 5.369780" />
+
+<!-- Balises de sécurité -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+<meta http-equiv="X-Content-Type-Options" content="nosniff" />
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+
+<!-- Optimisation des balises Open Graph existantes -->
+<meta property="og:url" content={Astro.url.href} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+
+<!-- Ajout des preloads pour les ressources critiques -->
+<link
+    rel="preload"
+    href="/assets/backgrounds/bg-main-light-800w.jpg"
+    as="image"
+    type="image/jpeg"
+/>
+<link
+    rel="preload"
+    href="/assets/backgrounds/bg-main-dark-800w.jpg"
+    as="image"
+    type="image/jpeg"
+/>
+
+<!-- Optimisation du chargement des polices -->
+<link
+    href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap"
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'"
+/>
+
+<!-- Ajout de balises de performance -->
+<meta name="theme-color" content="#000000" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />

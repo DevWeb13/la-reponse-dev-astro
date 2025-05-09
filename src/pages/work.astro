@@ -14,8 +14,8 @@ const projects = (await getCollection('work')).sort(
 ---
 
 <BaseLayout
-    title="LaReponseDev | Giuliano Loic"
-    description="En savoir plus sur mes projets et mon expérience."
+    title="Portfolio | Projets de Développement Web"
+    description="Découvrez mes réalisations en développement web : sites vitrines, applications web, PWA. Des projets sur mesure avec une attention particulière à l'UX et la performance."
 >
     <div class="stack gap-8 lg:gap-20">
         <main class="wrapper stack gap-20 lg:gap-48">
@@ -58,4 +58,17 @@ const projects = (await getCollection('work')).sort(
             </script>
         </div>
     </div>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Portfolio",
+            "name": "LaReponseDev Portfolio",
+            "description": "Portfolio de projets de développement web",
+            "url": "https://www.lareponsedev.com/work",
+            "author": {
+                "@type": "Person",
+                "name": "Giuliano Loic"
+            }
+        }
+    </script>
 </BaseLayout>

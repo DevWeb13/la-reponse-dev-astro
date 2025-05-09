@@ -6,8 +6,8 @@ import Hero from '../components/Hero.astro'
 ---
 
 <BaseLayout
-    title="À-propos | Giuliano Loic"
-    description="À-propos de Giuliano Loic développeur web"
+    title="À propos | Développeur Web Freelance à Marseille"
+    description="Découvrez le parcours et l'expertise de Giuliano Loic, développeur web freelance à Marseille. Spécialiste en développement web moderne, création de sites et applications performantes."
 >
     <div class="stack gap-8 lg:gap-20">
         <main class="wrapper stack gap-20 lg:gap-48">
@@ -171,6 +171,25 @@ import Hero from '../components/Hero.astro'
             </script>
         </div>
     </div>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "name": "À propos de Giuliano Loic",
+            "description": "Présentation de Giuliano Loic, développeur web freelance à Marseille",
+            "url": "https://www.lareponsedev.com/about",
+            "author": {
+                "@type": "Person",
+                "name": "Giuliano Loic",
+                "jobTitle": "Développeur Web Freelance",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Marseille",
+                    "addressCountry": "FR"
+                }
+            }
+        }
+    </script>
 </BaseLayout>
 
 <style>

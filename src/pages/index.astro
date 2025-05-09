@@ -17,7 +17,6 @@ import ContactCTA from '../components/ContactCTA.astro'
 import DonateCTA from '../components/DonateCTA.astro'
 import Skills from '../components/Skills.astro'
 
-
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection('work'))
     .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
@@ -27,7 +26,10 @@ const projects = (await getCollection('work'))
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
-<BaseLayout>
+<BaseLayout
+    title="Giuliano Loic | Développeur Web Freelance à Marseille"
+    description="Développeur web freelance à Marseille spécialisé dans la création de sites et applications web performants. Expert en React, Next.js, Astro et Qwik. Optimisation SEO et performance."
+>
     <div class="stack gap-8 lg:gap-20">
         <main class="wrapper stack gap-20 lg:gap-48">
             <header class="hero">
@@ -58,7 +60,7 @@ const projects = (await getCollection('work'))
                     ar-scale="fixed"
                     camera-controls
                     touch-action="pan-y"
-                    alt="A 3D model of an astronaut"
+                    alt="Avatar 3D interactif de Giuliano Loic, développeur web freelance à Marseille"
                     shadow-intensity="2"
                     skybox-image="/assets/models/rostock_laage_airport_1k.hdr"
                     skybox-height="1.5m"
@@ -395,3 +397,23 @@ const projects = (await getCollection('work'))
         }
     }
 </style>
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Giuliano Loic",
+        "url": "https://www.lareponsedev.com",
+        "jobTitle": "Développeur Web Freelance",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "LaReponseDev"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Marseille",
+            "addressCountry": "FR"
+        },
+        "sameAs": ["https://twitter.com/DeveloppementW1"]
+    }
+</script>

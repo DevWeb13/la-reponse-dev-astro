@@ -2,7 +2,7 @@
 title: cars-pat.fr
 publishDate: 2023-10-02 00:00:00
 img: /assets/cars-pat/mockup-Cars-Pat-Accueil.png
-img_alt: Un mock up de la page d'accueil
+img_alt: 'Interface du site web du garage automobile Cars Pat à Marseille, spécialisé en carrosserie et peinture'
 description: |
     Application pour un garage automobile de carrosserie peinture à Marseille.
 tags:
@@ -54,12 +54,12 @@ tags:
   <img src="/assets/cars-pat/mockup-Cars-Pat-Accueil.png" alt="Page d'accueil"/>
 </a>
 
--   Barre de tête contenant le mail et le téléphone de l’entreprise (cliquables).
--   En-tête contenant le nom de l’entreprise (cliquable) et la barre de navigation.
+-   Barre de tête contenant le mail et le téléphone de l'entreprise (cliquables).
+-   En-tête contenant le nom de l'entreprise (cliquable) et la barre de navigation.
 -   La barre de navigation permet de se déplacer sur chaque section du site.
--   En mode mobile, le bouton "burger" permet d’afficher la modale qui contient les liens de navigation.
+-   En mode mobile, le bouton "burger" permet d'afficher la modale qui contient les liens de navigation.
 -   Phrase d'accroche : Le nombre augmentera automatiquement chaque 1er avril (anniversaire de l'entreprise).
--   Les boutons d’appel à l'action redirigent vers les sections "Services" et "Contact".
+-   Les boutons d'appel à l'action redirigent vers les sections "Services" et "Contact".
 -   Le panneau de services contient la liste des services ainsi que l'E-mail et les deux numéros de téléphone (cliquables).
 
 ### Section nos services
@@ -68,10 +68,10 @@ tags:
   <img src="/assets/cars-pat/mockup-Cars-Pat-Services.png" alt="Section services"/>
 </a>
 
--   Comprend 5 cartes cliquables présentant les services de l’entreprise.
+-   Comprend 5 cartes cliquables présentant les services de l'entreprise.
 -   Au clic sur une carte, elle se déploie et se positionne au milieu de l'écran. Si une autre carte est déjà ouverte, celle-ci se referme automatiquement.
--   Les titres des cartes passent de la couleur noir à orange lors du survol de la souris ou lorsqu’elles sont déployées.
--   En mode ‘grand écran’ les photos de chaque carte sont en noir et blanc. Celles-ci passent en couleur lors du survol de la souris ou lorsqu’elles sont déployées.
+-   Les titres des cartes passent de la couleur noir à orange lors du survol de la souris ou lorsqu'elles sont déployées.
+-   En mode 'grand écran' les photos de chaque carte sont en noir et blanc. Celles-ci passent en couleur lors du survol de la souris ou lorsqu'elles sont déployées.
 -   Chaque carte déployée contient un bouton de redirection vers la section "Contact" avec le formulaire.
 
 ### Section galerie photos
@@ -81,7 +81,7 @@ tags:
 </a>
 
 -   Comprend des boutons de sélection pour les photos affichées.
--   La galerie passe d’une photo à l’autre toutes les 5 secondes.
+-   La galerie passe d'une photo à l'autre toutes les 5 secondes.
 -   Lecture/Pause: permet de mettre en pause le défilement des photos.
 -   Précédent et suivant: pour afficher la photos précédente ou la suivante.
 -   Bouton plein écran.
@@ -96,13 +96,13 @@ tags:
   <img src="/assets/cars-pat/mockup-Cars-Pat-Avis.png" alt="Section avis"/>
 </a>
 
--   Connectée à l’API Google, les avis et les notes sont mis à jour automatiquement.
+-   Connectée à l'API Google, les avis et les notes sont mis à jour automatiquement.
 -   Affichage de la note générale.
--   Affichage de la représentation graphique de la note sous forme d’étoiles.
--   Affichage du nombre total d’avis.
+-   Affichage de la représentation graphique de la note sous forme d'étoiles.
+-   Affichage du nombre total d'avis.
 -   Affichage des 5 derniers avis.
 -   Au clic sur le nom associé à un avis, redirection vers la page du compte.
--   Au clic sur "Voir" et "Poster", redirection vers la page d’avis.
+-   Au clic sur "Voir" et "Poster", redirection vers la page d'avis.
 
 ### Section contact
 
@@ -110,12 +110,12 @@ tags:
   <img src="/assets/cars-pat/mockup-Cars-Pat-Contact.png" alt="Section contact"/>
 </a>
 
--   Formulaire permettant d’envoyer un e-mail à l’adresse carrosse-pat@hotmail.fr.
+-   Formulaire permettant d'envoyer un e-mail à l'adresse carrosse-pat@hotmail.fr.
 -   Gestion des erreurs : Si un champ n'est pas correctement rempli lors de la soumission, son contour devient rouge et un message informe l'utilisateur de l'erreur.
 -   Pour ajouter une photo, cliquez simplement sur le champ prévu à cet effet et choisissez la ou les photos désirées (maximum de 9 photos, taille max par photo : 32MB).
 -   Drag & Drop: Vous pouvez également glisser-déposer la photo choisie dans le champ.
 -   Un reCaptcha V2 protège contre les attaques automatisées, comme les soumissions de formulaires automatisées par des bots.
--   Panneau d’informations (cliquable).
+-   Panneau d'informations (cliquable).
 -   Intégration de la frame de Google Maps.
 -   Intégration de la frame Google Street.
 

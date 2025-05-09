@@ -2,7 +2,7 @@
 title: paquerette-cactus.fr
 publishDate: 2024-12-01 00:00:00
 img: /assets/paquerette-cactus/mockup-Paquerette-Cactus-Accueil.png
-img_alt: Aperçu de l’interface responsive de Pâquerette & Cactus sur plusieurs écrans
+img_alt: 'Interface responsive du site Pâquerette & Cactus, présentant une vitrine interactive pour une praticienne en bien-être naturel'
 description: |
     Progressive Web App responsive développée pour une praticienne spécialisée en alimentation thérapeutique, phytothérapie et gestion des émotions. Le projet combine une identité visuelle douce avec une architecture moderne et évolutive, pensée pour accueillir de futures fonctionnalités (blog, espace membre, suivi personnalisé, etc.).
 tags:
@@ -61,8 +61,8 @@ tags:
 -   Bloc d’introduction avec un message de bienvenue détaillant les piliers fondamentaux du bien-être abordés sur la plateforme.
 -   Phrase d'accroche : « Votre compagnon bien-être au quotidien ! »
 -   Bouton dynamique au bas de l’écran :
-    -   Affiche “Installer” si l’application n’est pas encore installée (déclenche l’installation PWA).
-    -   Affiche “Commencer” si l’app est déjà installée (scroll automatique vers la première section de contenu).
+    -   Affiche "Installer" si l'application n'est pas encore installée (déclenche l'installation PWA).
+    -   Affiche "Commencer" si l'app est déjà installée (scroll automatique vers la première section de contenu).
 
 ---
 
@@ -72,9 +72,9 @@ tags:
   <img src="/assets/paquerette-cactus/mockup-Paquerette-Cactus-Apropos.png" alt="Section À propos de moi"/>
 </a>
 
--   Présentation chaleureuse de la praticienne, avec un message d’accueil : « Bienvenue dans votre havre de bien-être ! »
+-   Présentation chaleureuse de la praticienne, avec un message d'accueil : « Bienvenue dans votre havre de bien-être ! »
 -   Texte explicatif sur sa spécialisation en alimentation thérapeutique, phytothérapie et compréhension des besoins émotionnels.
--   Mise en avant d’une approche bienveillante et naturelle pour harmoniser corps et esprit.
+-   Mise en avant d'une approche bienveillante et naturelle pour harmoniser corps et esprit.
 -   Bloc de navigation complémentaire proposant cinq accès rapides :
     -   **Mes compétences**
     -   **Mes ateliers individuels**
@@ -85,9 +85,9 @@ tags:
 
 #### Me contacter
 
--   Formulaire de contact simple et accessible, avec champs pour le nom, l’email et le message.
+-   Formulaire de contact simple et accessible, avec champs pour le nom, l'email et le message.
 -   Intégration de **reCAPTCHA** pour éviter les envois automatiques indésirables.
--   Deux appels à l’action clairs :
+-   Deux appels à l'action clairs :
     -   Bouton **Envoyer** pour envoyer un message directement.
     -   Bouton **Réservation en ligne** pour accéder au module de prise de rendez-vous.
 -   Répétition des liens sociaux sous le formulaire pour renforcer la présence en ligne.
@@ -101,13 +101,13 @@ tags:
 </a>
 
 -   Page dédiée aux **fruits et légumes**, pensée comme un répertoire interactif consultable facilement sur mobile comme sur desktop.
--   Chaque carte d’aliment présente une image, son nom, son mode de consommation (cru/cuit, pulpe, etc.) et ses **valeurs nutritionnelles** (énergie, eau, glucides, fibres, vitamines, minéraux...).
+-   Chaque carte d'aliment présente une image, son nom, son mode de consommation (cru/cuit, pulpe, etc.) et ses **valeurs nutritionnelles** (énergie, eau, glucides, fibres, vitamines, minéraux...).
 -   Filtres dynamiques :
     -   Choix entre **fruits**, **légumes** ou **les deux**
     -   Affichage des aliments **en saison**, **hors saison** ou les deux
     -   **Tri personnalisable** selon le nom ou les valeurs nutritionnelles
     -   **Recherche par nom** avec champ de saisie
--   Affichage optimisé : chaque catégorie peut être consultée en vue condensée ou **vue complète en colonnes détaillées**, avec toutes les données nutritionnelles visibles d’un coup.
+-   Affichage optimisé : chaque catégorie peut être consultée en vue condensée ou **vue complète en colonnes détaillées**, avec toutes les données nutritionnelles visibles d'un coup.
 -   Clic sur un aliment → redirection vers une **fiche individuelle** contenant :
     -   Photo agrandie
     -   Reprise des valeurs nutritionnelles pour 100g
@@ -124,7 +124,7 @@ tags:
 -   Exemple de fiche : **Oignon jaune**
     -   Reprend toutes les valeurs nutritionnelles pour 100g.
     -   Description détaillée de ses bienfaits : digestion, transit, anti-cholestérol, propriétés nettoyantes.
-    -   Accès direct aux recettes thérapeutiques à base d’oignon.
+    -   Accès direct aux recettes thérapeutiques à base d'oignon.
 
 ---
 
@@ -145,7 +145,7 @@ tags:
   <img src="/assets/paquerette-cactus/mockup-Paquerette-Cactus-Recettes-Categorie.png" alt="Recettes anti-cholestérol"/>
 </a>
 
--   En cliquant sur une catégorie, l’utilisateur accède à la **liste des recettes associées** avec une recherche par nom possible.
+-   En cliquant sur une catégorie, l'utilisateur accède à la **liste des recettes associées** avec une recherche par nom possible.
 -   Chaque carte affiche :
     -   Une photo du plat
     -   Le titre de la recette
@@ -158,7 +158,7 @@ tags:
 -   En cliquant sur une recette, on accède à sa fiche complète :
     -   Titre, photo et catégorie thérapeutique
     -   **Liste des ingrédients**, claire et détaillée
-    -   Les ingrédients provenant de la section “Aliments” sont **cliquables**, menant à leur fiche dédiée
+    -   Les ingrédients provenant de la section "Aliments" sont **cliquables**, menant à leur fiche dédiée
 -   Recette découpée **en étapes simples** illustrées :
     -   Chaque étape comporte une image et une description accessible
     -   Mise en page responsive fluide, adaptée à la lecture mobile
@@ -214,22 +214,22 @@ tags:
 
 -   **Rôle du sommeil** :
 
-    -   Présenté comme un pilier essentiel du bien-être, influencé fortement par le stress et l’anxiété.
-    -   L’objectif est de mieux comprendre et apaiser ces troubles pour favoriser un endormissement naturel.
+    -   Présenté comme un pilier essentiel du bien-être, influencé fortement par le stress et l'anxiété.
+    -   L'objectif est de mieux comprendre et apaiser ces troubles pour favoriser un endormissement naturel.
 
 -   **Ressources proposées** :
 
-    -   **Vidéos de relaxation** avec bruits naturels (pluie, mer) pour faciliter l’endormissement.
+    -   **Vidéos de relaxation** avec bruits naturels (pluie, mer) pour faciliter l'endormissement.
     -   **Méditation guidée du soir** par Cédric Michel pour apaiser le mental avant le coucher.
 
 -   **Conseils naturels** :
-    -   Introduction à l’utilisation de la phytothérapie pour mieux dormir : gestion de l’anxiété, endormissement difficile, réveils nocturnes.
+    -   Introduction à l'utilisation de la phytothérapie pour mieux dormir : gestion de l'anxiété, endormissement difficile, réveils nocturnes.
     -   Approche douce et progressive, avec invitation à consulter un professionnel si besoin.
 
 ---
 
 #### Autres points
 
-Ce projet a été l'occasion pour moi de prendre en charge un projet complet, depuis la compréhension des besoins de la cliente jusqu’au déploiement de la plateforme, en passant par la conception du design, le développement de la PWA, et sa mise en ligne. <br>
-J’ai pu explorer des fonctionnalités avancées comme l’installation dynamique de la PWA, la navigation mobile optimisée, la génération de contenu interactif lié (aliments ⇄ recettes), l'intégration de vidéos YouTube, l'optimisation SEO, ainsi que la mise en place d’un formulaire sécurisé avec reCAPTCHA. <br>
-👉 <a href="mailto:contact@lareponsedev.com">N’hésitez pas à me contacter</a> si vous avez besoin d’un développeur pour votre projet.
+Ce projet a été l'occasion pour moi de prendre en charge un projet complet, depuis la compréhension des besoins de la cliente jusqu'au déploiement de la plateforme, en passant par la conception du design, le développement de la PWA, et sa mise en ligne. <br>
+J'ai pu explorer des fonctionnalités avancées comme l'installation dynamique de la PWA, la navigation mobile optimisée, la génération de contenu interactif lié (aliments ⇄ recettes), l'intégration de vidéos YouTube, l'optimisation SEO, ainsi que la mise en place d'un formulaire sécurisé avec reCAPTCHA. <br>
+👉 <a href="mailto:contact@lareponsedev.com">N'hésitez pas à me contacter</a> si vous avez besoin d'un développeur pour votre projet.

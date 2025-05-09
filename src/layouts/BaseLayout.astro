@@ -21,10 +21,14 @@ const { title, description } = Astro.props
         <MainHead title={title} description={description} />
     </head>
     <body>
-        
         <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TSZCKVW"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <noscript
+            ><iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-5TSZCKVW"
+                height="0"
+                width="0"
+                style="display:none;visibility:hidden"></iframe></noscript
+        >
         <!-- End Google Tag Manager (noscript) -->
 
         <div class="stack backgrounds">
@@ -44,7 +48,7 @@ const { title, description } = Astro.props
         </div>
 
         <script>
-            // Add “loaded” class once the document has completely loaded.
+            // Add "loaded" class once the document has completely loaded.
             addEventListener('load', () =>
                 document.documentElement.classList.add('loaded')
             )
@@ -136,6 +140,36 @@ const { title, description } = Astro.props
                     background-blend-mode: none;
                     --bg-gradient-size: none;
                 }
+            }
+
+            /* Optimisation de la lisibilité sur mobile */
+            @media (max-width: 50em) {
+                :root {
+                    --text-base: 16px;
+                    --line-height: 1.5;
+                }
+
+                body {
+                    font-size: var(--text-base);
+                    line-height: var(--line-height);
+                    -webkit-text-size-adjust: 100%;
+                }
+
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
+                    line-height: 1.2;
+                }
+            }
+
+            /* Optimisation du chargement des polices */
+            @font-face {
+                font-family: 'Public Sans';
+                font-display: swap;
+                src: url('/fonts/PublicSans-Regular.woff2') format('woff2');
             }
         </style>
     </body>
