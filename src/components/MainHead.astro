@@ -1,4 +1,5 @@
 ---
+// src/components/MainHead.astro
 import '../styles/global.css'
 
 interface Props {
@@ -14,20 +15,6 @@ const {
 const now = new Date().toISOString()
 ---
 
-<!-- Google Tag Manager -->
-<script is:inline>
-    ;(function (w, d, s, l, i) {
-        w[l] = w[l] || []
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
-        var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s),
-            dl = l != 'dataLayer' ? '&l=' + l : ''
-        j.async = true
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
-        f.parentNode.insertBefore(j, f)
-    })(window, document, 'script', 'dataLayer', 'GTM-5TSZCKVW')
-</script>
-<!-- End Google Tag Manager -->
 <meta charset="UTF-8" />
 <meta name="description" property="og:description" content={description} />
 
@@ -71,6 +58,19 @@ const now = new Date().toISOString()
     rel="stylesheet"
 />
 <link rel="sitemap" href="/sitemap-index.xml" />
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DKG4CT39WL"
+></script>
+<script is:inline>
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+        dataLayer.push(arguments)
+    }
+    gtag('js', new Date())
+    gtag('config', 'G-DKG4CT39WL')
+</script>
+
 <script is:inline>
     // This code is inlined in the head to make dark mode instant & blocking.
     const getThemePreference = () => {
@@ -128,20 +128,6 @@ const now = new Date().toISOString()
     media="print"
     onload="this.media='all'"
 />
-
-<!-- Optimisation du chargement des scripts -->
-<script
-    is:inline
-    async
-    src="https://www.googletagmanager.com/gtm.js?id=GTM-5TSZCKVW"></script>
-
-<!-- Model-viewer chargé globalement -->
-<script
-    is:inline
-    async
-    type="module"
-    src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"
-></script>
 
 <!-- Après les balises meta existantes -->
 <meta name="language" content="fr" />
