@@ -15,8 +15,10 @@ const { data, slug } = Astro.props.project
         alt={data.img_alt || ''}
         loading="lazy"
         decoding="async"
-        width="800"
-        height="600"
+        width="1200"
+        height="630"
+        fetchpriority="low"
+        style="content-visibility: auto"
     />
 </a>
 

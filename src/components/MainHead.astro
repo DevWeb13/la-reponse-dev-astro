@@ -125,27 +125,43 @@ const now = new Date().toISOString()
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 
-<!-- Ajout des preloads pour les ressources critiques -->
+<!-- Optimisation du chargement des ressources critiques -->
 <link
     rel="preload"
     href="/assets/backgrounds/bg-main-light-800w.jpg"
     as="image"
     type="image/jpeg"
+    fetchpriority="high"
 />
 <link
     rel="preload"
     href="/assets/backgrounds/bg-main-dark-800w.jpg"
     as="image"
     type="image/jpeg"
+    fetchpriority="high"
 />
 
 <!-- Optimisation du chargement des polices -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
     href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap"
     rel="stylesheet"
     media="print"
     onload="this.media='all'"
 />
+
+<!-- Optimisation du chargement des scripts -->
+<script
+    is:inline
+    async
+    src="https://www.googletagmanager.com/gtm.js?id=GTM-5TSZCKVW"></script>
+<script
+    is:inline
+    async
+    type="module"
+    src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"
+></script>
 
 <!-- Ajout de balises de performance -->
 <meta name="theme-color" content="#000000" />

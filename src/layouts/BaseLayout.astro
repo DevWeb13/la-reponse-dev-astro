@@ -64,6 +64,7 @@ const { title, description } = Astro.props
                     var(--bg-image-aspect-ratio) / var(--bg-scale)
                 );
                 --bg-gradient-size: calc(var(--bg-scale) * 100%);
+                will-change: transform;
             }
 
             :root.theme-dark {
@@ -107,25 +108,24 @@ const { title, description } = Astro.props
                 }
             }
 
+            /* Optimisation du chargement des images de fond */
             .backgrounds {
                 min-height: 100%;
                 isolation: isolate;
                 background:
-					/*noise*/
                     url('/assets/backgrounds/noise.png') top center/220px repeat,
-                    /*footer*/ var(--bg-image-footer) bottom
+                    var(--bg-image-footer) bottom center/var(--bg-gradient-size)
+                        no-repeat,
+                    var(--bg-image-main-curves) top
                         center/var(--bg-gradient-size) no-repeat,
-                    /*header1*/ var(--bg-image-main-curves) top
-                        center/var(--bg-gradient-size) no-repeat,
-                    /*header2*/ var(--bg-image-main) top
-                        center/var(--bg-gradient-size) no-repeat,
-                    /*base*/ var(--gray-999);
-                background-blend-mode: /*noise*/
-                    overlay,
-                    /*footer*/ var(--bg-blend-mode),
-                    /*header1*/ var(--bg-svg-blend-mode),
-                    /*header2*/ normal,
-                    /*base*/ normal;
+                    var(--bg-image-main) top center/var(--bg-gradient-size)
+                        no-repeat,
+                    var(--gray-999);
+                background-blend-mode: overlay, var(--bg-blend-mode),
+                    var(--bg-svg-blend-mode), normal, normal;
+                will-change: transform;
+                transform: translateZ(0);
+                backface-visibility: hidden;
             }
             @media (forced-colors: active) {
                 /* Deactivate custom backgrounds for high contrast users. */
@@ -136,17 +136,23 @@ const { title, description } = Astro.props
                 }
             }
 
-            /* Optimisation de la lisibilité sur mobile */
+            /* Optimisation des performances sur mobile */
             @media (max-width: 50em) {
                 :root {
                     --text-base: 16px;
                     --line-height: 1.5;
+                    --bg-scale: 1;
+                }
+
+                .backgrounds {
+                    background-size: 220px, 100%, 100%, 100%, auto;
                 }
 
                 body {
                     font-size: var(--text-base);
                     line-height: var(--line-height);
                     -webkit-text-size-adjust: 100%;
+                    -webkit-font-smoothing: antialiased;
                 }
 
                 h1,

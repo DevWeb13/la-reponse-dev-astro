@@ -70,7 +70,46 @@ const projects = (await getCollection('work'))
                     tone-mapping="commerce"
                     animation-name="Hello"
                     ar-modes="webxr scene-viewer"
-                    poster="/assets/models/poster.webp"></model-viewer>
+                    poster="/assets/models/poster.webp"
+                    loading="lazy"
+                    reveal="auto"
+                    reveal-when-loaded
+                    auto-rotate
+                    rotation-per-second="30deg"
+                    interaction-prompt="auto"
+                    interaction-prompt-style="basic"
+                    interaction-prompt-threshold="0"
+                    camera-orbit="0deg 75deg 105%"
+                    min-camera-orbit="auto auto 50%"
+                    max-camera-orbit="auto auto 150%"
+                    camera-target="0 0 0"
+                    field-of-view="30deg"
+                    min-field-of-view="25deg"
+                    max-field-of-view="45deg"
+                    interpolation-decay="200"
+                    touch-action="pan-y"
+                    disable-zoom
+                    disable-pan
+                    disable-tap
+                    auto-rotate-delay="0"
+                    auto-rotate
+                    rotation-per-second="30deg"
+                    interaction-prompt="auto"
+                    interaction-prompt-style="basic"
+                    interaction-prompt-threshold="0"
+                    camera-orbit="0deg 75deg 105%"
+                    min-camera-orbit="auto auto 50%"
+                    max-camera-orbit="auto auto 150%"
+                    camera-target="0 0 0"
+                    field-of-view="30deg"
+                    min-field-of-view="25deg"
+                    max-field-of-view="45deg"
+                    interpolation-decay="200"
+                    touch-action="pan-y"
+                    disable-zoom
+                    disable-pan
+                    disable-tap
+                    auto-rotate-delay="0"></model-viewer>
 
                 <!-- <img src="/assets/IMG_0960.GIF" alt="Description du GIF"> -->
             </header>
