@@ -102,28 +102,6 @@ const now = new Date().toISOString()
 </script>
 
 <SpeedInsights />
-<script
-    is:inline
-    async
-    type="module"
-    src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"
-></script>
-
-<!-- Après les balises meta existantes -->
-<meta name="language" content="fr" />
-<meta name="revisit-after" content="7 days" />
-<meta name="geo.region" content="FR-13" />
-<meta name="geo.placename" content="Marseille" />
-<meta name="geo.position" content="43.296482;5.369780" />
-<meta name="ICBM" content="43.296482, 5.369780" />
-
-<!-- Balises de sécurité -->
-<meta http-equiv="X-Content-Type-Options" content="nosniff" />
-
-<!-- Optimisation des balises Open Graph existantes -->
-<meta property="og:url" content={Astro.url.href} />
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
 
 <!-- Optimisation du chargement des ressources critiques -->
 <link
@@ -141,6 +119,14 @@ const now = new Date().toISOString()
     fetchpriority="high"
 />
 
+<!-- Preload du model-viewer -->
+<link
+    rel="preload"
+    href="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"
+    as="script"
+    type="application/javascript"
+/>
+
 <!-- Optimisation du chargement des polices -->
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -156,6 +142,32 @@ const now = new Date().toISOString()
     is:inline
     async
     src="https://www.googletagmanager.com/gtm.js?id=GTM-5TSZCKVW"></script>
+
+<!-- Model-viewer chargé après les ressources critiques -->
+<script
+    is:inline
+    async
+    type="module"
+    src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"
+    onload="this.setAttribute('data-loaded', 'true')"></script>
+
+<!-- Après les balises meta existantes -->
+<meta name="language" content="fr" />
+<meta name="revisit-after" content="7 days" />
+<meta name="geo.region" content="FR-13" />
+<meta name="geo.placename" content="Marseille" />
+<meta name="geo.position" content="43.296482;5.369780" />
+<meta name="ICBM" content="43.296482, 5.369780" />
+
+<!-- Balises de sécurité -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff" />
+
+<!-- Optimisation des balises Open Graph existantes -->
+<meta property="og:url" content={Astro.url.href} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+
+<!-- Optimisation du chargement des scripts -->
 <script
     is:inline
     async

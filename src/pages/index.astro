@@ -91,24 +91,6 @@ const projects = (await getCollection('work'))
                     disable-zoom
                     disable-pan
                     disable-tap
-                    auto-rotate-delay="0"
-                    auto-rotate
-                    rotation-per-second="30deg"
-                    interaction-prompt="auto"
-                    interaction-prompt-style="basic"
-                    interaction-prompt-threshold="0"
-                    camera-orbit="0deg 75deg 105%"
-                    min-camera-orbit="auto auto 50%"
-                    max-camera-orbit="auto auto 150%"
-                    camera-target="0 0 0"
-                    field-of-view="30deg"
-                    min-field-of-view="25deg"
-                    max-field-of-view="45deg"
-                    interpolation-decay="200"
-                    touch-action="pan-y"
-                    disable-zoom
-                    disable-pan
-                    disable-tap
                     auto-rotate-delay="0"></model-viewer>
 
                 <!-- <img src="/assets/IMG_0960.GIF" alt="Description du GIF"> -->
@@ -185,19 +167,17 @@ const projects = (await getCollection('work'))
         play: ({ repetitions }: { repetitions: number }) => void
         animationName: string
         updateComplete: Promise<void>
-        // Ajouter d'autres propriétés et méthodes spécifiques ici
     }
     const modelViewer: CustomModelViewerElement | null =
         document.querySelector('#monModelViewer')
     const animations = ['Idle', 'ArmStretching']
 
     let i = 0
-    let isHovered = false // Flag pour suivre l'état de survol
+    let isHovered = false
 
     const play = async () => {
         if (!modelViewer) return
         if (isHovered && modelViewer.animationName === 'ArmStretching') {
-            // Attendre la fin de l'animation ArmStretching si survolé
             return
         }
 
@@ -208,14 +188,12 @@ const projects = (await getCollection('work'))
 
     const playHello = async () => {
         if (!modelViewer) return
-        // Jouer l'animation "Hello" si ce n'est pas pendant "ArmStretching"
         if (modelViewer.animationName !== 'ArmStretching') {
             modelViewer.animationName = 'Hello'
             await modelViewer.updateComplete
             modelViewer.play({ repetitions: 1 })
-            i = 0 // Réinitialiser l'index pour la prochaine fois
+            i = 0
         } else {
-            // Attendre la fin de "ArmStretching" puis jouer "Hello"
             modelViewer.addEventListener(
                 'finished',
                 () => {
@@ -224,18 +202,17 @@ const projects = (await getCollection('work'))
                         modelViewer.updateComplete.then(() => {
                             modelViewer.play({ repetitions: 1 })
                         })
-                        i = 0 // Réinitialiser l'index pour la prochaine fois
+                        i = 0
                     }
                 },
                 { once: true }
-            ) // Utiliser 'once' pour que l'écouteur se retire après exécution
+            )
         }
     }
 
     modelViewer?.addEventListener('load', play)
     modelViewer?.addEventListener('finished', play)
 
-    // Gestion du survol
     modelViewer?.addEventListener('mouseenter', () => {
         isHovered = true
         playHello()
@@ -245,14 +222,12 @@ const projects = (await getCollection('work'))
         isHovered = false
     })
 
-    // Fonction pour gérer le clic ou le toucher sur mobile
     const handleMobileInteraction = () => {
-        isHovered = true // Vous pouvez choisir de traiter un clic comme un survol
+        isHovered = true
         playHello()
-        setTimeout(() => (isHovered = false), 1000) // Réinitialiser après un délai si nécessaire
+        setTimeout(() => (isHovered = false), 1000)
     }
 
-    // Ajout du gestionnaire d'événements pour les clics sur mobile
     modelViewer?.addEventListener('touchstart', handleMobileInteraction)
     modelViewer?.addEventListener('click', handleMobileInteraction)
 </script>
