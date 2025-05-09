@@ -1,7 +1,8 @@
-import { defineConfig } from 'astro/config'
-import vercel from '@astrojs/vercel/serverless'
-import sitemap from '@astrojs/sitemap'
 import partytown from '@astrojs/partytown'
+import sitemap from '@astrojs/sitemap'
+import vercel from '@astrojs/vercel/serverless'
+import { defineConfig } from 'astro/config'
+import webfontDownload from 'vite-plugin-webfont-dl'
 
 import tailwind from '@astrojs/tailwind'
 
@@ -23,4 +24,7 @@ export default defineConfig({
         }),
         tailwind(),
     ],
+    vite: {
+        plugins: [webfontDownload()],
+    },
 })
