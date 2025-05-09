@@ -54,44 +54,20 @@ const projects = (await getCollection('work'))
                     </div>
                 </Hero>
 
-                <model-viewer
-                    id="monModelViewer"
-                    src="/assets/models/myAvatar.glb"
-                    ar-scale="fixed"
-                    camera-controls
-                    touch-action="pan-y"
-                    alt="Avatar 3D interactif de Giuliano Loic, développeur web freelance à Marseille"
-                    shadow-intensity="2"
-                    skybox-image="/assets/models/rostock_laage_airport_1k.hdr"
-                    skybox-height="1.5m"
-                    max-camera-orbit="auto 90deg auto"
-                    ios-src="../../shared-assets/models/Astronaut.usdz"
-                    xr-environment
-                    tone-mapping="commerce"
-                    animation-name="Hello"
-                    ar-modes="webxr scene-viewer"
-                    poster="/assets/models/poster.webp"
-                    loading="lazy"
-                    reveal="auto"
-                    reveal-when-loaded
-                    auto-rotate
-                    rotation-per-second="30deg"
-                    interaction-prompt="auto"
-                    interaction-prompt-style="basic"
-                    interaction-prompt-threshold="0"
-                    camera-orbit="0deg 75deg 105%"
-                    min-camera-orbit="auto auto 50%"
-                    max-camera-orbit="auto auto 150%"
-                    camera-target="0 0 0"
-                    field-of-view="30deg"
-                    min-field-of-view="25deg"
-                    max-field-of-view="45deg"
-                    interpolation-decay="200"
-                    touch-action="pan-y"
-                    disable-zoom
-                    disable-pan
-                    disable-tap
-                    auto-rotate-delay="0"></model-viewer>
+                <div class="model-container">
+                    <div id="fallbackImage" class="fallback-image">
+                        <img
+                            src="/assets/models/poster.webp"
+                            alt="Avatar 3D interactif de Giuliano Loic, développeur web freelance à Marseille"
+                            loading="eager"
+                            fetchpriority="high"
+                        />
+                        <button id="loadModel" class="load-model-btn">
+                            Charger le modèle 3D
+                        </button>
+                    </div>
+                    <div id="modelViewerWrapper"></div>
+                </div>
 
                 <!-- <img src="/assets/IMG_0960.GIF" alt="Description du GIF"> -->
             </header>
@@ -168,68 +144,170 @@ const projects = (await getCollection('work'))
         animationName: string
         updateComplete: Promise<void>
     }
-    const modelViewer: CustomModelViewerElement | null =
-        document.querySelector('#monModelViewer')
-    const animations = ['Idle', 'ArmStretching']
 
-    let i = 0
-    let isHovered = false
+    document.addEventListener('DOMContentLoaded', () => {
+        const fallbackImage = document.getElementById(
+            'fallbackImage'
+        ) as HTMLDivElement
+        const loadModelBtn = document.getElementById(
+            'loadModel'
+        ) as HTMLButtonElement
+        const modelViewerWrapper = document.getElementById(
+            'modelViewerWrapper'
+        ) as HTMLDivElement
+        const animations = ['Idle', 'ArmStretching']
+        let i = 0
+        let isHovered = false
 
-    const play = async () => {
-        if (!modelViewer) return
-        if (isHovered && modelViewer.animationName === 'ArmStretching') {
-            return
+        if (!fallbackImage || !loadModelBtn || !modelViewerWrapper) return
+
+        function loadModelViewerScript(): Promise<void> {
+            return new Promise((resolve, reject) => {
+                if (
+                    window.customElements &&
+                    customElements.get('model-viewer')
+                ) {
+                    resolve()
+                    return
+                }
+                const script = document.createElement('script')
+                script.type = 'module'
+                script.src =
+                    'https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js'
+                script.onload = () => resolve()
+                script.onerror = () => reject()
+                document.head.appendChild(script)
+            })
         }
 
-        modelViewer.animationName = animations[i++ % animations.length]
-        await modelViewer.updateComplete
-        modelViewer.play({ repetitions: 1 })
-    }
-
-    const playHello = async () => {
-        if (!modelViewer) return
-        if (modelViewer.animationName !== 'ArmStretching') {
-            modelViewer.animationName = 'Hello'
-            await modelViewer.updateComplete
-            modelViewer.play({ repetitions: 1 })
-            i = 0
-        } else {
-            modelViewer.addEventListener(
-                'finished',
-                () => {
-                    if (isHovered) {
-                        modelViewer.animationName = 'Hello'
-                        modelViewer.updateComplete.then(() => {
-                            modelViewer.play({ repetitions: 1 })
-                        })
-                        i = 0
-                    }
-                },
-                { once: true }
+        function createModelViewer(): CustomModelViewerElement {
+            const modelViewer = document.createElement(
+                'model-viewer'
+            ) as CustomModelViewerElement
+            modelViewer.id = 'monModelViewer'
+            modelViewer.setAttribute('src', '/assets/models/myAvatar.glb')
+            modelViewer.setAttribute('ar-scale', 'fixed')
+            modelViewer.setAttribute('camera-controls', '')
+            modelViewer.setAttribute('touch-action', 'pan-y')
+            modelViewer.setAttribute(
+                'alt',
+                'Avatar 3D interactif de Giuliano Loic, développeur web freelance à Marseille'
             )
+            modelViewer.setAttribute('shadow-intensity', '2')
+            modelViewer.setAttribute(
+                'skybox-image',
+                '/assets/models/rostock_laage_airport_1k.hdr'
+            )
+            modelViewer.setAttribute('skybox-height', '1.5m')
+            modelViewer.setAttribute('max-camera-orbit', 'auto 90deg auto')
+            modelViewer.setAttribute(
+                'ios-src',
+                '../../shared-assets/models/Astronaut.usdz'
+            )
+            modelViewer.setAttribute('xr-environment', '')
+            modelViewer.setAttribute('tone-mapping', 'commerce')
+            modelViewer.setAttribute('animation-name', 'Hello')
+            modelViewer.setAttribute('ar-modes', 'webxr scene-viewer')
+            modelViewer.setAttribute('poster', '/assets/models/poster.webp')
+            modelViewer.setAttribute('loading', 'lazy')
+            modelViewer.setAttribute('reveal', 'auto')
+            modelViewer.setAttribute('reveal-when-loaded', '')
+            modelViewer.setAttribute('auto-rotate', '')
+            modelViewer.setAttribute('rotation-per-second', '30deg')
+            modelViewer.setAttribute('interaction-prompt', 'auto')
+            modelViewer.setAttribute('interaction-prompt-style', 'basic')
+            modelViewer.setAttribute('interaction-prompt-threshold', '0')
+            modelViewer.setAttribute('camera-orbit', '0deg 75deg 105%')
+            modelViewer.setAttribute('min-camera-orbit', 'auto auto 50%')
+            modelViewer.setAttribute('max-camera-orbit', 'auto auto 150%')
+            modelViewer.setAttribute('camera-target', '0 0 0')
+            modelViewer.setAttribute('field-of-view', '30deg')
+            modelViewer.setAttribute('min-field-of-view', '25deg')
+            modelViewer.setAttribute('max-field-of-view', '45deg')
+            modelViewer.setAttribute('interpolation-decay', '200')
+            modelViewer.setAttribute('touch-action', 'pan-y')
+            modelViewer.setAttribute('disable-zoom', '')
+            modelViewer.setAttribute('disable-pan', '')
+            modelViewer.setAttribute('disable-tap', '')
+            modelViewer.setAttribute('auto-rotate-delay', '0')
+
+            modelViewer.style.width = '100%'
+            modelViewer.style.height = '100%'
+            return modelViewer
         }
-    }
 
-    modelViewer?.addEventListener('load', play)
-    modelViewer?.addEventListener('finished', play)
+        function attachModelViewerEvents(
+            modelViewer: CustomModelViewerElement
+        ) {
+            const play = async () => {
+                if (!modelViewer) return
+                if (
+                    isHovered &&
+                    modelViewer.animationName === 'ArmStretching'
+                ) {
+                    return
+                }
+                modelViewer.animationName = animations[i++ % animations.length]
+                await modelViewer.updateComplete
+                modelViewer.play({ repetitions: 1 })
+            }
 
-    modelViewer?.addEventListener('mouseenter', () => {
-        isHovered = true
-        playHello()
+            const playHello = async () => {
+                if (!modelViewer) return
+                if (modelViewer.animationName !== 'ArmStretching') {
+                    modelViewer.animationName = 'Hello'
+                    await modelViewer.updateComplete
+                    modelViewer.play({ repetitions: 1 })
+                    i = 0
+                } else {
+                    modelViewer.addEventListener(
+                        'finished',
+                        () => {
+                            if (isHovered) {
+                                modelViewer.animationName = 'Hello'
+                                modelViewer.updateComplete.then(() => {
+                                    modelViewer.play({ repetitions: 1 })
+                                })
+                                i = 0
+                            }
+                        },
+                        { once: true }
+                    )
+                }
+            }
+
+            modelViewer.addEventListener('load', play)
+            modelViewer.addEventListener('finished', play)
+
+            modelViewer.addEventListener('mouseenter', () => {
+                isHovered = true
+                playHello()
+            })
+
+            modelViewer.addEventListener('mouseleave', () => {
+                isHovered = false
+            })
+
+            const handleMobileInteraction = () => {
+                isHovered = true
+                playHello()
+                setTimeout(() => (isHovered = false), 1000)
+            }
+
+            modelViewer.addEventListener('touchstart', handleMobileInteraction)
+            modelViewer.addEventListener('click', handleMobileInteraction)
+        }
+
+        loadModelBtn.addEventListener('click', async () => {
+            loadModelBtn.disabled = true
+            loadModelBtn.textContent = 'Chargement...'
+            await loadModelViewerScript()
+            const modelViewer = createModelViewer()
+            attachModelViewerEvents(modelViewer)
+            fallbackImage.style.display = 'none'
+            modelViewerWrapper.appendChild(modelViewer)
+        })
     })
-
-    modelViewer?.addEventListener('mouseleave', () => {
-        isHovered = false
-    })
-
-    const handleMobileInteraction = () => {
-        isHovered = true
-        playHello()
-        setTimeout(() => (isHovered = false), 1000)
-    }
-
-    modelViewer?.addEventListener('touchstart', handleMobileInteraction)
-    modelViewer?.addEventListener('click', handleMobileInteraction)
 </script>
 
 <style>
@@ -377,6 +455,76 @@ const projects = (await getCollection('work'))
             border-radius: 1.5rem;
             height: 9.5rem;
         }
+    }
+
+    .model-container {
+        position: relative;
+        aspect-ratio: 5 / 4;
+        width: 100%;
+        max-width: 500px;
+        border-radius: 1.5rem;
+        box-shadow: var(--shadow-md);
+        overflow: hidden;
+        height: auto;
+    }
+
+    #modelViewerWrapper {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: stretch;
+        justify-content: stretch;
+        z-index: 1;
+    }
+
+    .fallback-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: #18142a;
+        z-index: 2;
+    }
+
+    .fallback-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background: #18142a;
+    }
+
+    .load-model-btn {
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0.5rem 1rem;
+        background: var(--accent-regular);
+        color: var(--accent-text-over);
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .load-model-btn:hover {
+        background: var(--accent-hover);
+    }
+
+    .model-container model-viewer {
+        aspect-ratio: 5 / 4;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 1.5rem;
+        box-shadow: var(--shadow-md);
+        width: 100%;
+        height: 100%;
+        max-width: 500px;
     }
 </style>
 
