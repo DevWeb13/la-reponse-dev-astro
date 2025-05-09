@@ -4,9 +4,9 @@ import { getCollection } from 'astro:content'
 import BaseLayout from '../layouts/BaseLayout.astro'
 
 import ContactCTA from '../components/ContactCTA.astro'
-import PortfolioPreview from '../components/PortfolioPreview.astro'
-import Hero from '../components/Hero.astro'
 import Grid from '../components/Grid.astro'
+import Hero from '../components/Hero.astro'
+import PortfolioPreview from '../components/PortfolioPreview.astro'
 
 const projects = (await getCollection('work')).sort(
     (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
@@ -34,29 +34,7 @@ const projects = (await getCollection('work')).sort(
                 }
             </Grid>
         </main>
-        <div class="wrapper stack gap-8 lg:gap-20">
-            <ins
-                class="adsbygoogle flex items-center justify-center"
-                data-ad-layout="in-article"
-                data-ad-format="fluid"
-                data-ad-client="ca-pub-2091224773462896"
-                data-ad-slot="8894881530"></ins>
-            <script type="text/javascript">
-                ;(adsbygoogle = window.adsbygoogle || []).push({})
-            </script>
-        </div>
         <ContactCTA />
-        <div class="wrapper stack gap-8 lg:gap-20">
-            <ins
-                class="adsbygoogle flex items-center justify-center"
-                data-ad-layout="in-article"
-                data-ad-format="fluid"
-                data-ad-client="ca-pub-2091224773462896"
-                data-ad-slot="8894881530"></ins>
-            <script type="text/javascript">
-                ;(adsbygoogle = window.adsbygoogle || []).push({})
-            </script>
-        </div>
     </div>
     <script type="application/ld+json">
         {
