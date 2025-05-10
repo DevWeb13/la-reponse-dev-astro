@@ -151,6 +151,12 @@ const { title, description } = Astro.props
                     line-height: 1.2;
                 }
             }
+            @media (max-width: 600px) {
+                .backgrounds {
+                    background-image: none !important;
+                    background: var(--gray-999) !important;
+                }
+            }
         </style>
     </body>
 </html>
