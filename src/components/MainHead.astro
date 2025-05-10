@@ -56,9 +56,10 @@ const now = new Date().toISOString()
 <link rel="sitemap" href="/sitemap-index.xml" />
 
 <!-- Google Analytics (GA4) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DKG4CT39WL"
-></script>
-<script is:inline>
+<script
+    type="text/partytown"
+    src="https://www.googletagmanager.com/gtag/js?id=G-DKG4CT39WL"></script>
+<script type="text/partytown">
     window.dataLayer = window.dataLayer || []
     function gtag() {
         dataLayer.push(arguments)
