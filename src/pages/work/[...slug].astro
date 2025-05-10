@@ -12,9 +12,6 @@ interface Props {
     entry: CollectionEntry<'work'>
 }
 
-// This is a dynamic route that generates a page for every Markdown file in src/content/
-// Read more about dynamic routes and this `getStaticPaths` function in the Astro docs:
-// https://docs.astro.build/en/core-concepts/routing/#dynamic-routes
 export async function getStaticPaths() {
     const work = await getCollection('work')
     return work.map((entry) => ({
@@ -26,6 +23,19 @@ export async function getStaticPaths() {
 const { entry } = Astro.props
 const { Content } = await entry.render()
 export const prerender = true
+
+const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: entry.data.title,
+    description: entry.data.description,
+    url: 'https://www.lareponsedev.com/work/' + entry.slug + '/',
+    author: {
+        '@type': 'Person',
+        name: 'Giuliano Loic',
+    },
+    image: entry.data.img,
+}
 ---
 
 <BaseLayout title={entry.data.title} description={entry.data.description}>
@@ -72,18 +82,7 @@ export const prerender = true
 </BaseLayout>
 
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": {entry.data.title},
-  "description": {entry.data.description},
-  "url": `https://www.lareponsedev.com/work/${entry.slug}/`,
-  "author": {
-    "@type": "Person",
-    "name": "Giuliano Loic"
-  },
-  "image": {entry.data.img}
-}
+    {JSON.stringify(jsonLd)}
 </script>
 
 <style>
