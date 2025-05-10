@@ -9,8 +9,8 @@ Disallow: /tmp/
 Disallow: /private/
 
 # Autoriser l'indexation des images
-Allow: /*.jpg$
+Allow: /*.webp$
 Allow: /*.jpeg$
 Allow: /*.gif$
-Allow: /*.png$
+Allow: /*.webp$
 Allow: /*.webp$

@@ -1,7 +1,7 @@
 ---
 title: Tryade dashboard
 publishDate: 2023-06-02 00:00:00
-img: /assets/tryade-dashboard/Tryade-Dashboard-Home.png
+img: /assets/tryade-dashboard/Tryade-Dashboard-Home.webp
 img_alt: "Tableau de bord de gestion d'entreprise pour la plateforme FiveM, interface moderne et fonctionnelle"
 description: |
     Tableau de bord de gestion d'entreprise pour la plateforme FiveM (MOD GTA V)!
@@ -33,7 +33,7 @@ style="color: var(--accent-dark) ; font-weight: bold;"
 ### Page d'accueil
 
 <a href="https://triade-dashboard.vercel.app" target="\_blank">
-  <img src="/assets/tryade-dashboard/Tryade-Dashboard-Home.png" alt="Page d'accueil"/>
+  <img src="/assets/tryade-dashboard/Tryade-Dashboard-Home.webp" alt="Page d'accueil"/>
 </a>
 
 -   Vue d'ensemble des informations de l'entreprise.
@@ -41,7 +41,7 @@ style="color: var(--accent-dark) ; font-weight: bold;"
 ### Page de gestion des employés
 
 <a href="https://triade-dashboard.vercel.app/employees" target="\_blank">
-  <img src="/assets/tryade-dashboard/Tryade-Dashboard-Employees.png" alt="Page de gestion des employées"/>
+  <img src="/assets/tryade-dashboard/Tryade-Dashboard-Employees.webp" alt="Page de gestion des employées"/>
 </a>
 
 -   Visualisation de l'ensemble des employés sous forme de tableau paginé.
@@ -54,7 +54,7 @@ style="color: var(--accent-dark) ; font-weight: bold;"
 ### Page de création d'un nouvel employé
 
 <a href="https://triade-dashboard.vercel.app/employees/employee/add" target="\_blank">
-  <img src="/assets/tryade-dashboard/Tryade-Dashboard-Add-Employees.png" alt="Page de création d'un nouvel employé"/>
+  <img src="/assets/tryade-dashboard/Tryade-Dashboard-Add-Employees.webp" alt="Page de création d'un nouvel employé"/>
 </a>
 
 -   Création d'un nouvel employé.
@@ -63,7 +63,7 @@ style="color: var(--accent-dark) ; font-weight: bold;"
 ### Page de gestion des grades
 
 <a href="https://triade-dashboard.vercel.app/ranks" target="\_blank">
-  <img src="/assets/tryade-dashboard/Tryade-Dashboard-Ranks.png" alt="Page de gestion des grades"/>
+  <img src="/assets/tryade-dashboard/Tryade-Dashboard-Ranks.webp" alt="Page de gestion des grades"/>
 </a>
 
 -   Visualisation de l'ensemble des grades sous forme de tableau paginé.
@@ -76,7 +76,7 @@ style="color: var(--accent-dark) ; font-weight: bold;"
 ### Page de création d'un nouveau grade
 
 <a href="https://triade-dashboard.vercel.app/ranks/rank/add" target="\_blank">
-  <img src="/assets/tryade-dashboard/Tryade-Dashboard-Add-Ranks.png" alt="Page de création d'un nouveau grade"/>
+  <img src="/assets/tryade-dashboard/Tryade-Dashboard-Add-Ranks.webp" alt="Page de création d'un nouveau grade"/>
 </a>
 
 -   Création d'un nouveau grade.
@@ -85,7 +85,7 @@ style="color: var(--accent-dark) ; font-weight: bold;"
 ### Page de gestion des finances
 
 <a href="https://triade-dashboard.vercel.app/finance" target="\_blank">
-  <img src="/assets/tryade-dashboard/Tryade-Dashboard-Finance.png" alt="Page de gestion des finances"/>
+  <img src="/assets/tryade-dashboard/Tryade-Dashboard-Finance.webp" alt="Page de gestion des finances"/>
 </a>
 
 -   Visualisation de l'ensemble des finances sous forme de graphique.
@@ -95,7 +95,7 @@ style="color: var(--accent-dark) ; font-weight: bold;"
 ### Page de gestion des améliorations
 
 <a href="https://triade-dashboard.vercel.app/improvements" target="\_blank">
-  <img src="/assets/tryade-dashboard/Tryade-Dashboard-Improvement.png" alt="Page de gestion des améliorations"/>
+  <img src="/assets/tryade-dashboard/Tryade-Dashboard-Improvement.webp" alt="Page de gestion des améliorations"/>
 </a>
 
 -   Possiblité d'acheter les améliorations pour le stockage.
@@ -105,7 +105,7 @@ style="color: var(--accent-dark) ; font-weight: bold;"
 ### Page de visualisation des activités
 
 <a href="https://triade-dashboard.vercel.app/activities" target="\_blank">
-  <img src="/assets/tryade-dashboard/Tryade-Dashboard-Activity.png" alt="Page de visualisation des activités"/>
+  <img src="/assets/tryade-dashboard/Tryade-Dashboard-Activity.webp" alt="Page de visualisation des activités"/>
 </a>
 
 -   Visualisation de l'ensemble des activités sous forme de tableau paginé.

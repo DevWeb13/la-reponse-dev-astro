@@ -1,6 +1,6 @@
 # Giuliano Loic | LaReponseDev | Portfolio
 
-![portfolio](https://github.com/DevWeb13/la-reponse-dev-astro/blob/master/public/assets/home-page.png)
+![portfolio](https://github.com/DevWeb13/la-reponse-dev-astro/blob/master/public/assets/home-page.webp)
 
 ## Measures SonarCloud
 

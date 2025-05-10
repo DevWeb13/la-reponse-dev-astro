@@ -1,7 +1,7 @@
 ---
 title: cars-pat.fr
 publishDate: 2023-10-02 00:00:00
-img: /assets/cars-pat/mockup-Cars-Pat-Accueil.png
+img: /assets/cars-pat/mockup-Cars-Pat-Accueil.webp
 img_alt: 'Interface du site web du garage automobile Cars Pat à Marseille, spécialisé en carrosserie et peinture'
 description: |
     Application pour un garage automobile de carrosserie peinture à Marseille.
@@ -51,7 +51,7 @@ tags:
 ### Section d'accueil
 
 <a href="https://www.cars-pat.fr/#accueil" target="\_blank">
-  <img src="/assets/cars-pat/mockup-Cars-Pat-Accueil.png" alt="Page d'accueil"/>
+  <img src="/assets/cars-pat/mockup-Cars-Pat-Accueil.webp" alt="Page d'accueil"/>
 </a>
 
 -   Barre de tête contenant le mail et le téléphone de l'entreprise (cliquables).
@@ -65,7 +65,7 @@ tags:
 ### Section nos services
 
 <a href="https://www.cars-pat.fr/#services" target="\_blank">
-  <img src="/assets/cars-pat/mockup-Cars-Pat-Services.png" alt="Section services"/>
+  <img src="/assets/cars-pat/mockup-Cars-Pat-Services.webp" alt="Section services"/>
 </a>
 
 -   Comprend 5 cartes cliquables présentant les services de l'entreprise.
@@ -77,7 +77,7 @@ tags:
 ### Section galerie photos
 
 <a href="https://www.cars-pat.fr/#gallery" target="\_blank">
-  <img src="/assets/cars-pat/mockup-Cars-Pat-Gallery.png" alt="Section galerie"/>
+  <img src="/assets/cars-pat/mockup-Cars-Pat-Gallery.webp" alt="Section galerie"/>
 </a>
 
 -   Comprend des boutons de sélection pour les photos affichées.
@@ -93,7 +93,7 @@ tags:
 ### Section avis
 
 <a href="https://www.cars-pat.fr/#avis" target="\_blank">
-  <img src="/assets/cars-pat/mockup-Cars-Pat-Avis.png" alt="Section avis"/>
+  <img src="/assets/cars-pat/mockup-Cars-Pat-Avis.webp" alt="Section avis"/>
 </a>
 
 -   Connectée à l'API Google, les avis et les notes sont mis à jour automatiquement.
@@ -107,7 +107,7 @@ tags:
 ### Section contact
 
 <a href="https://www.cars-pat.fr/#contact" target="\_blank">
-  <img src="/assets/cars-pat/mockup-Cars-Pat-Contact.png" alt="Section contact"/>
+  <img src="/assets/cars-pat/mockup-Cars-Pat-Contact.webp" alt="Section contact"/>
 </a>
 
 -   Formulaire permettant d'envoyer un e-mail à l'adresse carrosse-pat@hotmail.fr.

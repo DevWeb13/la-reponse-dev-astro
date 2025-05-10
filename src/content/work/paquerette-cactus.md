@@ -1,7 +1,7 @@
 ---
 title: paquerette-cactus.fr
 publishDate: 2024-12-01 00:00:00
-img: /assets/paquerette-cactus/mockup-Paquerette-Cactus-Accueil.png
+img: /assets/paquerette-cactus/mockup-Paquerette-Cactus-Accueil.webp
 img_alt: 'Interface responsive du site Pâquerette & Cactus, présentant une vitrine interactive pour une praticienne en bien-être naturel'
 description: |
     Progressive Web App responsive développée pour une praticienne spécialisée en alimentation thérapeutique, phytothérapie et gestion des émotions. Le projet combine une identité visuelle douce avec une architecture moderne et évolutive, pensée pour accueillir de futures fonctionnalités (blog, espace membre, suivi personnalisé, etc.).
@@ -51,7 +51,7 @@ tags:
 ### Section d’accueil
 
 <a href="https://www.paquerette-cactus.fr/" target="_blank">
-  <img src="/assets/paquerette-cactus/mockup-Paquerette-Cactus-Accueil.png" alt="Page d’accueil du site Pâquerette & Cactus"/>
+  <img src="/assets/paquerette-cactus/mockup-Paquerette-Cactus-Accueil.webp" alt="Page d’accueil du site Pâquerette & Cactus"/>
 </a>
 
 -   Logo cliquable en haut à gauche, accompagné d’un bouton email fixe pour contacter la praticienne à tout moment, sur toutes les pages.
@@ -69,7 +69,7 @@ tags:
 ### À propos de moi / Me contacter
 
 <a href="https://www.paquerette-cactus.fr/contact/me-contacter/" target="_blank">
-  <img src="/assets/paquerette-cactus/mockup-Paquerette-Cactus-Apropos.png" alt="Section À propos de moi"/>
+  <img src="/assets/paquerette-cactus/mockup-Paquerette-Cactus-Apropos.webp" alt="Section À propos de moi"/>
 </a>
 
 -   Présentation chaleureuse de la praticienne, avec un message d'accueil : « Bienvenue dans votre havre de bien-être ! »
@@ -97,7 +97,7 @@ tags:
 ### Alimentation thérapeutique – Aliments
 
 <a href="https://www.paquerette-cactus.fr/alimentation-therapeutique/aliments/" target="_blank">
-  <img src="/assets/paquerette-cactus/mockup-Paquerette-Cactus-Aliments.png" alt="Section Aliments"/>
+  <img src="/assets/paquerette-cactus/mockup-Paquerette-Cactus-Aliments.webp" alt="Section Aliments"/>
 </a>
 
 -   Page dédiée aux **fruits et légumes**, pensée comme un répertoire interactif consultable facilement sur mobile comme sur desktop.
@@ -118,7 +118,7 @@ tags:
     -   Sur **mobile** : barre repositionnée en haut pour une meilleure ergonomie tactile
 
 <a href="https://www.paquerette-cactus.fr/alimentation-therapeutique/aliments/Oignon%20jaune,%20cru/" target="_blank">
-  <img src="/assets/paquerette-cactus/mockup-Paquerette-Cactus-Fiche-Oignon.png" alt="Exemple de fiche aliment – Oignon jaune"/>
+  <img src="/assets/paquerette-cactus/mockup-Paquerette-Cactus-Fiche-Oignon.webp" alt="Exemple de fiche aliment – Oignon jaune"/>
 </a>
 
 -   Exemple de fiche : **Oignon jaune**
@@ -131,7 +131,7 @@ tags:
 ### Alimentation thérapeutique – Recettes thérapeutiques
 
 <a href="https://www.paquerette-cactus.fr/alimentation-therapeutique/recettes/" target="_blank">
-  <img src="/assets/paquerette-cactus/mockup-Paquerette-Cactus-Recettes.png" alt="Accueil des recettes thérapeutiques"/>
+  <img src="/assets/paquerette-cactus/mockup-Paquerette-Cactus-Recettes.webp" alt="Accueil des recettes thérapeutiques"/>
 </a>
 
 -   Interface graphique originale basée sur des **post-it** colorés, représentant les grandes catégories thérapeutiques :
@@ -142,7 +142,7 @@ tags:
     -   Jus bien-être
 
 <a href="https://www.paquerette-cactus.fr/alimentation-therapeutique/recettes/anti-cholesterol/" target="_blank">
-  <img src="/assets/paquerette-cactus/mockup-Paquerette-Cactus-Recettes-Categorie.png" alt="Recettes anti-cholestérol"/>
+  <img src="/assets/paquerette-cactus/mockup-Paquerette-Cactus-Recettes-Categorie.webp" alt="Recettes anti-cholestérol"/>
 </a>
 
 -   En cliquant sur une catégorie, l'utilisateur accède à la **liste des recettes associées** avec une recherche par nom possible.
@@ -152,7 +152,7 @@ tags:
     -   Les bénéfices santé concernés (anti-diabète, anti-cholestérol...)
 
 <a href="https://www.paquerette-cactus.fr/alimentation-therapeutique/recettes/recette/Choux%20de%20bruxelles%20r%C3%B4tis%20aux%20noix%20et%20aux%20cranberries/" target="_blank">
-  <img src="/assets/paquerette-cactus/mockup-Paquerette-Cactus-Recette-Ingredients.png" alt="Recette – ingrédients"/>
+  <img src="/assets/paquerette-cactus/mockup-Paquerette-Cactus-Recette-Ingredients.webp" alt="Recette – ingrédients"/>
 </a>
 
 -   En cliquant sur une recette, on accède à sa fiche complète :

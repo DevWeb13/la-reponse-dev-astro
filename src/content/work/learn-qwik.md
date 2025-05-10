@@ -1,7 +1,7 @@
 ---
 title: learn-qwik.com
 publishDate: 2024-04-01 00:00:00
-img: /assets/learn-qwik/mockup-Learn-Qwik-Accueil.png
+img: /assets/learn-qwik/mockup-Learn-Qwik-Accueil.webp
 img_alt: "Interface moderne de la plateforme d'apprentissage Learn Qwik, montrant la page d'accueil avec les chapitres et le système de progression"
 description: |
     Plateforme pédagogique pour apprendre Qwik, avec suivi des chapitres, abonnements Stripe, envoi d'emails avec Resend, et interface soignée.
@@ -48,7 +48,7 @@ tags:
 ### Page d'accueil
 
 <a href="https://www.learn-qwik.com" target="\_blank">
-  <img src="/assets/learn-qwik/mockup-Learn-Qwik-Accueil.png" alt="Page d'accueil Learn Qwik"/>
+  <img src="/assets/learn-qwik/mockup-Learn-Qwik-Accueil.webp" alt="Page d'accueil Learn Qwik"/>
 </a>
 
 -   Présentation claire de la plateforme et de ses objectifs.
@@ -65,7 +65,7 @@ tags:
 ### Page de connexion
 
 <a href="https://www.learn-qwik.com/auth/login/" target="_blank">
-  <img src="/assets/learn-qwik/mockup-learn-qwik-login.png" alt="Page de connexion Learn Qwik"/>
+  <img src="/assets/learn-qwik/mockup-learn-qwik-login.webp" alt="Page de connexion Learn Qwik"/>
 </a>
 
 -   Connexion unifiée par email avec **Magic Link** (pas de mot de passe requis).
@@ -82,7 +82,7 @@ Cette approche réduit les frictions à l'entrée tout en maintenant un bon nive
 ### Pages des chapitres
 
 <a href="https://www.learn-qwik.com/learn/dashboard-app/" target="_blank">
-  <img src="/assets/learn-qwik/mockup-Learn-Qwik-Chapitres.png" alt="Aperçu des pages de chapitres Learn Qwik"/>
+  <img src="/assets/learn-qwik/mockup-Learn-Qwik-Chapitres.webp" alt="Aperçu des pages de chapitres Learn Qwik"/>
 </a>
 
 Le parcours est orienté **projet Fullstack**, avec pour objectif de construire une application complète avec Qwik — de la configuration initiale au déploiement final.
@@ -109,7 +109,7 @@ Chaque chapitre est pensé pour être court, concret et immédiatement applicabl
 ### Page Releases
 
 <a href="https://www.learn-qwik.com/releases/?page=1" target="_blank">
-  <img src="/assets/learn-qwik/mockup-Learn-Qwik-Releases.png" alt="Aperçu de la page des releases Qwik"/>
+  <img src="/assets/learn-qwik/mockup-Learn-Qwik-Releases.webp" alt="Aperçu de la page des releases Qwik"/>
 </a>
 
 Cette page liste automatiquement les dernières versions et mises à jour du framework Qwik.  
@@ -126,7 +126,7 @@ L'objectif est d'intégrer directement dans Learn Qwik les nouveautés majeures 
 ### Page Blog
 
 <a href="https://www.learn-qwik.com/blog/" target="_blank">
-  <img src="/assets/learn-qwik/mockup-Learn-Qwik-Blog.png" alt="Aperçu du blog Learn Qwik"/>
+  <img src="/assets/learn-qwik/mockup-Learn-Qwik-Blog.webp" alt="Aperçu du blog Learn Qwik"/>
 </a>
 
 Cette section regroupe les actualités, tutoriels et réflexions autour de Qwik et de son écosystème.
@@ -149,7 +149,7 @@ _Avril 2025 · 5 min de lecture_
 ### Page Compte utilisateur
 
 <a href="https://www.learn-qwik.com/account/" target="_blank">
-  <img src="/assets/learn-qwik/mockup-Learn-Qwik-Account.png" alt="Aperçu de la page compte utilisateur Learn Qwik"/>
+  <img src="/assets/learn-qwik/mockup-Learn-Qwik-Account.webp" alt="Aperçu de la page compte utilisateur Learn Qwik"/>
 </a>
 
 Cette page permet à chaque utilisateur de gérer son profil et son abonnement en toute autonomie.
