@@ -2,9 +2,9 @@ import partytown from '@astrojs/partytown'
 import sitemap from '@astrojs/sitemap'
 import vercel from '@astrojs/vercel/serverless'
 import { defineConfig } from 'astro/config'
-import webfontDownload from 'vite-plugin-webfont-dl'
 
 import tailwind from '@astrojs/tailwind'
+import { astroFont } from 'astro-font/integration'
 
 // https://astro.build/config
 export default defineConfig({
@@ -23,8 +23,6 @@ export default defineConfig({
             },
         }),
         tailwind(),
+        astroFont(),
     ],
-    vite: {
-        plugins: [webfontDownload()],
-    },
 })

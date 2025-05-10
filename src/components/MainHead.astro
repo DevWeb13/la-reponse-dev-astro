@@ -1,6 +1,7 @@
 ---
 // src/components/MainHead.astro
 import '../styles/global.css'
+import { AstroFont } from 'astro-font'
 
 interface Props {
     title?: string | undefined
@@ -51,12 +52,7 @@ const now = new Date().toISOString()
 <title>{title}</title>
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-    href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap"
-    rel="stylesheet"
-/>
+
 <link rel="sitemap" href="/sitemap-index.xml" />
 
 <!-- Google Analytics (GA4) -->
@@ -140,3 +136,28 @@ const now = new Date().toISOString()
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta name="format-detection" content="telephone=no" />
+
+<AstroFont
+    config={[
+        {
+            name: 'Public Sans',
+            googleFontsURL:
+                'https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&display=swap',
+            preload: true,
+            display: 'swap',
+            selector: 'body',
+            fallback: 'sans-serif',
+            src: [],
+        },
+        {
+            name: 'Rubik',
+            googleFontsURL:
+                'https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap',
+            preload: true,
+            display: 'swap',
+            selector: 'body',
+            fallback: 'sans-serif',
+            src: [],
+        },
+    ]}
+/>
