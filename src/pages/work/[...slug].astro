@@ -23,19 +23,6 @@ export async function getStaticPaths() {
 const { entry } = Astro.props
 const { Content } = await entry.render()
 export const prerender = true
-
-const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: entry.data.title,
-    description: entry.data.description,
-    url: 'https://www.lareponsedev.com/work/' + entry.slug + '/',
-    author: {
-        '@type': 'Person',
-        name: 'Giuliano Loic',
-    },
-    image: entry.data.img,
-}
 ---
 
 <BaseLayout title={entry.data.title} description={entry.data.description}>
@@ -50,26 +37,34 @@ const jsonLd = {
                         <Hero title={entry.data.title} align="start">
                             <div class="details">
                                 <div class="tags">
-                                    {entry.data.tags.map((t) => <Pill>{t}</Pill>)}
+                                    {
+                                        entry.data.tags.map((t) => (
+                                            <Pill>{t}</Pill>
+                                        ))
+                                    }
                                 </div>
-                                <p class="description">{entry.data.description}</p>
+                                <p class="description">
+                                    {entry.data.description}
+                                </p>
                             </div>
                         </Hero>
                     </div>
                 </header>
                 <main class="wrapper">
                     <section class="stack gap-10 content">
-                        {entry.data.img && (
-                            <img
-                                src={entry.data.img}
-                                alt={entry.data.img_alt || ''}
-                                loading="lazy"
-                                decoding="async"
-                                width="1200"
-                                height="630"
-                                fetchpriority="high"
-                            />
-                        )}
+                        {
+                            entry.data.img && (
+                                <img
+                                    src={entry.data.img}
+                                    alt={entry.data.img_alt || ''}
+                                    loading="lazy"
+                                    decoding="async"
+                                    width="1200"
+                                    height="630"
+                                    fetchpriority="high"
+                                />
+                            )
+                        }
                         <div class="content">
                             <Content />
                         </div>
@@ -80,10 +75,6 @@ const jsonLd = {
         <ContactCTA />
     </div>
 </BaseLayout>
-
-<script type="application/ld+json">
-    {JSON.stringify(jsonLd)}
-</script>
 
 <style>
     header {
