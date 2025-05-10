@@ -1,13 +1,10 @@
-// optimize-noise.js
+// optimize-noise-final.js
 import sharp from 'sharp'
-
 const input = 'public/assets/backgrounds/noise.webp'
-const output = 'public/assets/backgrounds/noise-optimized.webp'
 
-try {
-    await sharp(input).resize(220).webp({ quality: 35 }).toFile(output)
-
-    console.log(`✅ Image optimisée : ${output}`)
-} catch (err) {
-    console.error(`❌ Erreur : ${err.message}`)
-}
+sharp(input)
+    .webp({ quality: 25 })
+    .toBuffer()
+    .then((data) => sharp(data).toFile(input))
+    .then(() => console.log('✅ noise.webp optimisé à 25%'))
+    .catch((err) => console.error('❌ Erreur :', err))
