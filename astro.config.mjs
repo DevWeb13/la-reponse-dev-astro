@@ -9,11 +9,7 @@ import { astroFont } from 'astro-font/integration'
 // https://astro.build/config
 export default defineConfig({
     output: 'static',
-    adapter: vercel({
-        webAnalytics: {
-            enabled: true,
-        },
-    }),
+    adapter: vercel(),
     site: 'https://www.lareponsedev.com',
     integrations: [
         sitemap(),
