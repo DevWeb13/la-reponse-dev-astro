@@ -26,11 +26,18 @@ async function resizeAll() {
     for (const { input, output } of images) {
         try {
             await fs.access(input)
-            await sharp(input).resize(480).webp({ quality: 75 }).toFile(output)
 
-            console.log(`✅ ${path.basename(output)} générée avec succès.`)
+            await sharp(input)
+                .resize(600) // largeur cible
+                .webp({ quality: 50 }) // compression WebP
+                .toFile(output)
+
+            const { size } = await fs.stat(output)
+            const sizeKb = (size / 1024).toFixed(1)
+
+            console.log(`✅ ${path.basename(output)} générée : ${sizeKb} Ko`)
         } catch (err) {
-            console.error(`❌ Erreur pour ${input}:`, err.message)
+            console.error(`❌ Erreur avec ${input} : ${err.message}`)
         }
     }
 }
