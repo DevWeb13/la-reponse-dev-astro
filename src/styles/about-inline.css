@@ -1,11 +1,11 @@
-.about-page .hero {
+.hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
 }
 
-.about-page .video-container {
+.video-container {
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@
     box-shadow: var(--shadow-sm);
 }
 
-.about-page .btn-play {
+.btn-play {
     color: var(--accent-text-over);
     background-color: var(--accent-regular);
     padding: 0.5rem 1rem;
@@ -36,59 +36,59 @@
     border: 0;
 }
 
-.about-page .credits {
+.credits {
     font-size: var(--text-sm);
     margin: 0.5rem 0;
     color: #3d4663;
 }
 
-.about-page section {
+section {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     color: var(--gray-200);
 }
 
-.about-page .section-title {
+.section-title {
     grid-column-start: 1;
     font-size: var(--text-xl);
     color: var(--gray-0);
 }
 
-.about-page .content {
+.content {
     grid-column: 2 / 4;
 }
 
-.about-page .content :global(a) {
+.content :global(a) {
     text-decoration: 1px solid underline transparent;
     text-underline-offset: 0.25em;
     transition: text-decoration-color var(--theme-transition);
 }
 
-.about-page .content :global(a:hover),
-.about-page .content :global(a:focus) {
+.content :global(a:hover),
+.content :global(a:focus) {
     text-decoration-color: currentColor;
 }
 
-.about-page .bold {
+.bold {
     font-weight: 600;
     color: var(--gray-0);
 }
 
 @media (min-width: 50em) {
-    .about-page .hero {
+    .hero {
         display: grid;
         grid-template-columns: 6fr 4fr;
         padding-inline: 2.5rem;
         gap: 3.75rem;
     }
 
-    .about-page section {
+    section {
         flex-direction: row;
         font-size: var(--text-lg);
     }
 
-    .about-page section h2 {
+    section h2 {
         font-size: var(--text-2xl);
         min-width: 30%;
     }

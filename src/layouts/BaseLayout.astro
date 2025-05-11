@@ -19,6 +19,11 @@ const { title, description } = Astro.props
 <html lang="fr">
     <head>
         <MainHead title={title} description={description} />
+        {
+            Astro.url.pathname === '/about/' && (
+                <style is:inline>@import '../styles/about-inline.css';</style>
+            )
+        }
     </head>
     <body>
         <div class="stack backgrounds">
