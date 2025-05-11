@@ -60,9 +60,17 @@ const projects = (await getCollection('work'))
 
                 <div class="model-container">
                     <div id="fallbackImage" class="fallback-image">
+                        <!-- <img
+                            src="/assets/models/poster.webp"
+                            alt="Avatar 3D interactif de Giuliano Loic, développeur web freelance à Marseille"
+                            loading="eager"
+                            fetchpriority="high"
+                        /> -->
                         <Image
                             src={poster}
                             alt="Avatar 3D interactif de Giuliano Loic, développeur web freelance à Marseille"
+                            loading="eager"
+                            fetchpriority="high"
                         />
                         <button id="loadModel" class="load-model-btn">
                             Charger le modèle 3D
