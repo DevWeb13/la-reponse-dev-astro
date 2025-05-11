@@ -10,16 +10,26 @@ const { data, slug } = Astro.props.project
 
 <a class="card" href={`/work/${slug}/`}>
     <span class="title">{data.title}</span>
-    <img
-        src={data.img_small}
-        srcset={`${data.img_small} 600w, ${data.img} 1200w`}
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        alt={data.img_alt || ''}
-        loading="lazy"
-        decoding="async"
-        fetchpriority="low"
-        style="content-visibility: auto"
-    />
+    <picture>
+        <source
+            srcset={data.img_small}
+            media="(max-width: 768px)"
+            type="image/webp"
+        />
+        <source
+            srcset={data.img}
+            media="(min-width: 769px)"
+            type="image/webp"
+        />
+        <img
+            src={data.img_small}
+            alt={data.img_alt || ''}
+            loading="lazy"
+            decoding="async"
+            fetchpriority="low"
+            style="content-visibility: auto"
+        />
+    </picture>
 </a>
 
 <style scoped>
