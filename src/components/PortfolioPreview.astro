@@ -10,7 +10,7 @@ const { data, slug } = Astro.props.project
 
 <a class="card" href={`/work/${slug}/`}>
     <span class="title">{data.title}</span>
-    <picture>
+    <picture class="card-image">
         <source
             srcset={data.img_small}
             media="(max-width: 768px)"
@@ -27,7 +27,6 @@ const { data, slug } = Astro.props.project
             loading="lazy"
             decoding="async"
             fetchpriority="low"
-            style="content-visibility: auto"
         />
     </picture>
 </a>
@@ -79,5 +78,18 @@ const { data, slug } = Astro.props.project
         .title {
             border-radius: 0.9375rem;
         }
+    }
+
+    .card-image {
+        grid-area: 1 / 1 / 3 / 3;
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
     }
 </style>
