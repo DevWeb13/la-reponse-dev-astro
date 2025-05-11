@@ -2,6 +2,7 @@
 title: cars-pat.fr
 publishDate: 2023-10-02 00:00:00
 img: /assets/cars-pat/mockup-Cars-Pat-Accueil.webp
+img_small: /assets/cars-pat/mockup-Cars-Pat-Accueil-small.webp
 img_alt: 'Interface du site web du garage automobile Cars Pat à Marseille, spécialisé en carrosserie et peinture'
 description: |
     Application pour un garage automobile de carrosserie peinture à Marseille.

@@ -2,6 +2,7 @@
 title: paquerette-cactus.fr
 publishDate: 2024-12-01 00:00:00
 img: /assets/paquerette-cactus/mockup-Paquerette-Cactus-Accueil.webp
+img_small: /assets/paquerette-cactus/mockup-Paquerette-Cactus-Accueil-small.webp
 img_alt: 'Interface responsive du site Pâquerette & Cactus, présentant une vitrine interactive pour une praticienne en bien-être naturel'
 description: |
     Progressive Web App responsive développée pour une praticienne spécialisée en alimentation thérapeutique, phytothérapie et gestion des émotions. Le projet combine une identité visuelle douce avec une architecture moderne et évolutive, pensée pour accueillir de futures fonctionnalités (blog, espace membre, suivi personnalisé, etc.).

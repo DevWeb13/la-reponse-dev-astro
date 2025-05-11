@@ -2,6 +2,7 @@
 title: Tryade dashboard
 publishDate: 2023-06-02 00:00:00
 img: /assets/tryade-dashboard/Tryade-Dashboard-Home.webp
+img_small: /assets/tryade-dashboard/Tryade-Dashboard-Home-small.webp
 img_alt: "Tableau de bord de gestion d'entreprise pour la plateforme FiveM, interface moderne et fonctionnelle"
 description: |
     Tableau de bord de gestion d'entreprise pour la plateforme FiveM (MOD GTA V)!

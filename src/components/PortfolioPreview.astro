@@ -12,6 +12,8 @@ const { data, slug } = Astro.props.project
     <span class="title">{data.title}</span>
     <img
         src={data.img}
+        srcset={`${data.img_small} 600w, ${data.img} 1200w`}
+        sizes="(max-width: 50em) 100vw, 50vw"
         alt={data.img_alt || ''}
         loading="lazy"
         decoding="async"

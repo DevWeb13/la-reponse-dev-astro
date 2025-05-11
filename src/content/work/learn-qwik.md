@@ -2,6 +2,7 @@
 title: learn-qwik.com
 publishDate: 2024-04-01 00:00:00
 img: /assets/learn-qwik/mockup-Learn-Qwik-Accueil.webp
+img_small: /assets/learn-qwik/mockup-Learn-Qwik-Accueil-small.webp
 img_alt: "Interface moderne de la plateforme d'apprentissage Learn Qwik, montrant la page d'accueil avec les chapitres et le système de progression"
 description: |
     Plateforme pédagogique pour apprendre Qwik, avec suivi des chapitres, abonnements Stripe, envoi d'emails avec Resend, et interface soignée.
